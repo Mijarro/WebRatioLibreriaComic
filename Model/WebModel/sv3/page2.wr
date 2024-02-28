@@ -1,0 +1,62 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="240" gr:y="490" id="sv3#page2" name="Proveedores" landmark="true">
+  <ContentUnits>
+    <DataUnit id="sv3#page2#dau2" name="Proveedor Seleccionado" gr:x="0" gr:y="0" entity="ent2" displayAll="true">
+      <Selector id="sv3#page2#dau2#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page2#dau2#su3#kcond3" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <IndexUnit id="sv3#page2#inu2" name="Lista Proveedores" linkOrder="sv3#page2#inu2#ln4 sv3#page2#inu2#ln12 sv3#page2#inu2#ln16" gr:x="10" gr:y="135" entity="ent2" displayAttributes="ent2#att4">
+      <Link id="sv3#page2#inu2#ln4" name="Seleccionar" to="sv3#page2#dau2" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page2#inu2#ln12" name="Eliminar" to="sv3#dlu2" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page2#inu2#ln16" name="Editar" to="sv3#seu3" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <EntryUnit id="sv3#page2#enu2" name="Nuevo Proveedor" linkOrder="sv3#page2#enu2#ln18" gr:x="20" gr:y="255" fieldOrder="sv3#page2#enu2#fld6 sv3#page2#enu2#fld3 sv3#page2#enu2#fld4 sv3#page2#enu2#fld5" entity="ent2">
+      <Field id="sv3#page2#enu2#fld3" name="NombreProveedor" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
+      <Field id="sv3#page2#enu2#fld4" name="EmailProveedor" type="string" modifiable="true" attribute="ent2#att15" preloaded="true"/>
+      <Field id="sv3#page2#enu2#fld5" name="TelefonoProveedor" type="integer" modifiable="true" attribute="ent2#att16" preloaded="true"/>
+      <Field id="sv3#page2#enu2#fld6" name="oIDProveedor" type="string" attribute="ent2#att2" preloaded="true"/>
+      <Link id="sv3#page2#enu2#ln18" name="Guardar" to="sv3#inn2" type="normal" validate="true">
+        <LinkParameter id="sv3#page2#enu2#ln18#par108" name="oIDComic_Input" source="sv3#page2#enu2#fld6" target="sv3#inn2.isnotnull"/>
+        <LinkParameter id="sv3#page2#enu2#ln18#par116" name="EmailProveedor_PASSING" source="sv3#page2#enu2#fld4" passing="true"/>
+        <LinkParameter id="sv3#page2#enu2#ln18#par117" name="NombreProveedor_PASSING" source="sv3#page2#enu2#fld3" passing="true"/>
+        <LinkParameter id="sv3#page2#enu2#ln18#par118" name="oIDProveedor_PASSING" source="sv3#page2#enu2#fld6" passing="true"/>
+        <LinkParameter id="sv3#page2#enu2#ln18#par119" name="TelefonoProveedor_PASSING" source="sv3#page2#enu2#fld5" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page2#dau2">
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att16"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv3#page2#inu2">
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Link link="sv3#page2#inu2#ln4"/>
+          <layout:Link link="sv3#page2#inu2#ln12"/>
+          <layout:Link link="sv3#page2#inu2#ln16"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv3#page2#enu2">
+          <layout:Field field="sv3#page2#enu2#fld6"/>
+          <layout:Field field="sv3#page2#enu2#fld3"/>
+          <layout:Field field="sv3#page2#enu2#fld4"/>
+          <layout:Field field="sv3#page2#enu2#fld5"/>
+          <layout:Link link="sv3#page2#enu2#ln18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
