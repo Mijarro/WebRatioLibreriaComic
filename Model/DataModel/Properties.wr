@@ -14,7 +14,7 @@
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
   </Entity>
-  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db1" db:table="user_group">
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db2" db:table="user_group">
     <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
@@ -22,7 +22,7 @@
       <db:JoinColumn attribute="groupOID" name="group_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db1" db:table="user">
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db2" db:table="user">
     <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
       <db:JoinColumn attribute="userOID" name="oid"/>
     </RelationshipRole1>
@@ -30,7 +30,7 @@
       <db:JoinColumn attribute="groupOID" name="group_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db1" db:table="group">
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db2" db:table="group">
     <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
       <db:JoinColumn attribute="groupOID" name="oid"/>
     </RelationshipRole1>
@@ -38,7 +38,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db1" db:table="group_module">
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db2" db:table="group_module">
     <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
       <db:JoinColumn attribute="groupOID" name="group_oid"/>
     </RelationshipRole1>
@@ -69,8 +69,7 @@
       <db:JoinColumn attribute="ent3#att3" name="comic_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public">
-  </db:Database>
+  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public"/>
   <Entity gr:x="580" gr:y="405" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
     <Attribute id="ent4#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att8" name="Nombrecategoria" type="string" db:column="nombrecategoria"/>

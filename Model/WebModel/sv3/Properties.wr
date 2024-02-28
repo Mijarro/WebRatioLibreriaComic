@@ -125,32 +125,18 @@
       </Selector>
       <OKLink id="sv3#mfu3#oln18" name="OKFlow11" to="sv3#page3" automaticCoupling="true"/>
     </ModifyUnit>
-    <LogoutUnit gr:x="1285" gr:y="1385" id="sv3#lou2" name="Logout" landmark="true" siteView="sv1"/>
-    <DeleteUnit gr:x="1300" gr:y="1250" id="sv3#dlu4" name="Delete4" entity="User">
+    <LogoutUnit gr:x="1405" gr:y="1030" id="sv3#lou2" name="Logout" landmark="true" siteView="sv1"/>
+    <DeleteUnit gr:x="1205" gr:y="1020" id="sv3#dlu4" name="Delete4" entity="User">
       <Selector id="sv3#dlu4#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu4#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#dlu4#oln7" name="OKFlow7" to="sv3#lou2" automaticCoupling="true"/>
     </DeleteUnit>
-    <ModifyUnit gr:x="780" gr:y="1325" id="sv3#mfu4" name="Update4" entity="User">
+    <ModifyUnit gr:x="1040" gr:y="1325" id="sv3#mfu4" name="Update4" entity="User">
       <Selector id="sv3#mfu4#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#mfu4#su15#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#mfu4#oln9" name="OKFlow9" to="sv3#page7" automaticCoupling="true"/>
     </ModifyUnit>
-    <IsNotNullUnit gr:x="1005" gr:y="1300" id="sv3#inn4" name="Is Not Null4">
-      <OKLink id="sv3#inn4#oln19" name="OKFlow19" to="sv3#mfu4">
-        <LinkParameter id="sv3#inn4#oln19#par27" name="Email_PASSING_email" sourceLinkParameter="sv3#page7#enu6#ln19#par23" target="sv3#mfu4.email"/>
-        <LinkParameter id="sv3#inn4#oln19#par30" name="Usuario_PASSING_userName" sourceLinkParameter="sv3#page7#enu6#ln19#par26" target="sv3#mfu4.userName"/>
-        <LinkParameter id="sv3#inn4#oln19#par101" name="verde_password" target="sv3#mfu4.password" sourceValue="Verde"/>
-        <LinkParameter id="sv3#inn4#oln19#par141" name="oid_PASSING_KeyCondition15 [oid]" sourceLinkParameter="sv3#page7#enu6#ln19#par140" target="sv3#mfu4#su15#kcond15.userOID"/>
-      </OKLink>
-      <KOLink id="sv3#inn4#kln5" name="KOFlow5" to="sv3#mfu4" gr:bendpoints="-109,76,121,31">
-        <LinkParameter id="sv3#inn4#kln5#par31" name="Email_PASSING_email" sourceLinkParameter="sv3#page7#enu6#ln19#par23" target="sv3#mfu4.email"/>
-        <LinkParameter id="sv3#inn4#kln5#par34" name="Usuario_PASSING_userName" sourceLinkParameter="sv3#page7#enu6#ln19#par26" target="sv3#mfu4.userName"/>
-        <LinkParameter id="sv3#inn4#kln5#par99" name="password_PASSING_password" target="sv3#mfu4.password" sourceValue="rojo"/>
-        <LinkParameter id="sv3#inn4#kln5#par142" name="oid_PASSING_KeyCondition15 [oid]" sourceLinkParameter="sv3#page7#enu6#ln19#par140" target="sv3#mfu4#su15#kcond15.userOID"/>
-      </KOLink>
-    </IsNotNullUnit>
   </OperationUnits>
 </SiteView>
