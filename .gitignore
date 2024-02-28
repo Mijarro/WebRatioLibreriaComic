@@ -1,0 +1,3 @@
+# Exclude files
+/.Temp~/*
+/Model/DataModel/Properties.wr
