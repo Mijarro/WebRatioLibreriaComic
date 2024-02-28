@@ -1,0 +1,99 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="730" gr:y="995" id="sv3#page7" name="Editar Perfil" landmark="true">
+  <ContentUnits>
+    <GetUnit gr:x="115" gr:y="5" id="sv3#page7#gtu1" name="Get1" contextParameters="UserCtxParam" customDescriptor="false">
+      <Link id="sv3#page7#gtu1#ln28" name="Flow28" to="sv3#page7#mssu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#gtu1#ln28#par107" name="UserCtxParam.oid_Shown Messages" source="sv3#page7#gtu1.UserCtxParam" target="sv3#page7#mssu4.shownMessages"/>
+      </Link>
+      <Link id="sv3#page7#gtu1#ln29" name="Flow29" to="sv3#page7#seu1" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#gtu1#ln29#par113" name="UserCtxParam.oid_UseroID [oid]" source="sv3#page7#gtu1.UserCtxParam" target="sv3#page7#seu1#su17#kcond17.userOID"/>
+        <LinkParameter id="sv3#page7#gtu1#ln29#par143" name="UserCtxParam.oid_PASSING" source="sv3#page7#gtu1.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="270" gr:y="0" id="sv3#page7#seu1" name="Selector1" entity="User" distinctAttributes="userOID userName password email" distinct="true">
+      <Link id="sv3#page7#seu1#ln15" name="Flow15" to="sv3#page7#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#seu1#ln15#par109" name="password_Contrase&#241;a" source="passwordArray" target="sv3#page7#enu6#fld22_slot"/>
+        <LinkParameter id="sv3#page7#seu1#ln15#par110" name="email_Email" source="emailArray" target="sv3#page7#enu6#fld23_slot"/>
+        <LinkParameter id="sv3#page7#seu1#ln15#par111" name="userName_Usuario" source="userNameArray" target="sv3#page7#enu6#fld21_slot"/>
+        <LinkParameter id="sv3#page7#seu1#ln15#par139" name="oid_oid" target="sv3#page7#enu6#fld29_slot" sourceLinkParameter="sv3#page7#gtu1#ln29#par143"/>
+        <LinkParameter id="sv3#page7#seu1#ln15#par147" name="0_Contrase&#241;a - Preselection" sourceValue="0" target="sv3#page7#enu6#msfld1_presel"/>
+      </Link>
+      <Selector id="sv3#page7#seu1#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page7#seu1#su17#kcond17" name="UseroID" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+    <EntryUnit gr:x="280" gr:y="125" id="sv3#page7#enu6" name="Editar Usuario" entity="User" fieldOrder="sv3#page7#enu6#fld21 sv3#page7#enu6#fld22 sv3#page7#enu6#fld23 sv3#page7#enu6#fld24 sv3#page7#enu6#fld29" linkOrder="sv3#page7#enu6#ln17 sv3#page7#enu6#ln19">
+      <Field id="sv3#page7#enu6#fld21" name="Usuario" type="string" modifiable="true" attribute="userName" preloaded="true"/>
+      <Field id="sv3#page7#enu6#fld22" name="Contrase&#241;a" type="password" attribute="password" preloaded="true"/>
+      <Field id="sv3#page7#enu6#fld23" name="Email" type="string" modifiable="true" attribute="email" preloaded="true"/>
+      <Field id="sv3#page7#enu6#fld24" name="Nueva contrase&#241;a" type="string" modifiable="true"/>
+      <Link id="sv3#page7#enu6#ln17" name="Borrar Usuario" to="sv3#dlu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page7#enu6#ln17#par16" name="Key [oid]_KeyCondition14 [oid]" source="key.userOID" target="sv3#dlu4#su14#kcond14.userOID"/>
+      </Link>
+      <Link id="sv3#page7#enu6#ln19" name="Guardar" to="sv3#inn4" type="normal" validate="true">
+        <LinkParameter id="sv3#page7#enu6#ln19#par21" name="Nueva contrase&#241;a_Input" source="sv3#page7#enu6#fld24" target="sv3#inn4.isnotnull"/>
+        <LinkParameter id="sv3#page7#enu6#ln19#par23" name="Email_PASSING" source="sv3#page7#enu6#fld23" passing="true"/>
+        <LinkParameter id="sv3#page7#enu6#ln19#par26" name="Usuario_PASSING" source="sv3#page7#enu6#fld21" passing="true"/>
+        <LinkParameter id="sv3#page7#enu6#ln19#par100" name="Contrase&#241;a_PASSING" source="sv3#page7#enu6#fld22" passing="true"/>
+        <LinkParameter id="sv3#page7#enu6#ln19#par140" name="oid_PASSING" source="sv3#page7#enu6#fld29" passing="true"/>
+      </Link>
+      <Field id="sv3#page7#enu6#fld29" name="oid" type="integer" attribute="userOID" preloaded="true"/>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="0" gr:y="85" id="sv3#page7#mssu4" name="Message4"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#enu6">
+          <layout:Link link="sv3#page7#enu6#ln17"/>
+          <layout:Link link="sv3#page7#enu6#ln19"/>
+          <layout:Field field="sv3#page7#enu6#fld21"/>
+          <layout:Field field="sv3#page7#enu6#fld22"/>
+          <layout:Field field="sv3#page7#enu6#fld23"/>
+          <layout:Field field="sv3#page7#enu6#fld24"/>
+          <layout:Field field="sv3#page7#enu6#fld29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
