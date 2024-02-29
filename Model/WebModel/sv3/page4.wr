@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="-100" id="sv3#page4" name="Home" landmark="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="110" gr:y="45" id="sv3#page4" name="Home" landmark="false">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv3#page4#inu3" name="Simple List3" entity="ent3" displayAttributes="ent3#att3 ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13"/>
   </ContentUnits>

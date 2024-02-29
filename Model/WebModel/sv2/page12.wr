@@ -1,0 +1,146 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page12" name="Comics" linkVisibilityPolicy="always" landmark="true" gr:x="235" gr:y="95">
+  <ContentUnits>
+    <IndexUnit id="sv2#page12#inu10" name="Lista Comics" linkOrder="sv2#page12#inu10#ln22 sv2#page12#inu10#ln25 sv2#page12#inu10#ln26" gr:x="20" gr:y="130" entity="ent3" displayAttributes="ent3#att5">
+      <Link id="sv2#page12#inu10#ln22" name="Seleccionar" to="sv2#page12#dau9" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page12#inu10#ln25" name="Eliminar" to="sv2#dlu6" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page12#inu10#ln26" name="Editar" to="sv2#seu10" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <DataUnit id="sv2#page12#dau9" name="Comic Seleccionado" gr:x="0" gr:y="0" entity="ent3" displayAll="true">
+      <Selector id="sv2#page12#dau9#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page12#dau9#su25#kcond25" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <EntryUnit id="sv2#page12#enu11" name="Formulario Comic" linkOrder="sv2#page12#enu11#ln27" gr:x="20" gr:y="230" fieldOrder="sv2#page12#enu11#fld47 sv2#page12#enu11#fld42 sv2#page12#enu11#fld43 sv2#page12#enu11#fld41 sv2#page12#enu11#fld44 sv2#page12#enu11#fld45 sv2#page12#enu11#fld46" entity="ent3">
+      <Link id="sv2#page12#enu11#ln27" name="Guardar" to="sv2#inn5" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#enu11#ln27#par43" name="oIDComic_Input" source="sv2#page12#enu11#fld47" target="sv2#inn5.isnotnull"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par44" name="Autor_PASSING" source="sv2#page12#enu11#fld46" passing="true"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par45" name="DescripcionComic_PASSING" source="sv2#page12#enu11#fld43" passing="true"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par46" name="Edad_PASSING" source="sv2#page12#enu11#fld44" passing="true"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par47" name="FechaPublicacion_PASSING" source="sv2#page12#enu11#fld45" passing="true"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par48" name="Precio_PASSING" source="sv2#page12#enu11#fld41" passing="true"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par49" name="TituloComic_PASSING" source="sv2#page12#enu11#fld42" passing="true"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par50" name="oIDComic_PASSING" source="sv2#page12#enu11#fld47" passing="true"/>
+      </Link>
+      <Field id="sv2#page12#enu11#fld41" name="Precio" type="float" modifiable="true" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld42" name="TituloComic" type="string" modifiable="true" attribute="ent3#att5" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld43" name="DescripcionComic" type="string" modifiable="true" attribute="ent3#att10" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld44" name="Edad" type="integer" modifiable="true" attribute="ent3#att11" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld45" name="FechaPublicacion" type="date" modifiable="true" attribute="ent3#att12" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld46" name="Autor" type="string" modifiable="true" attribute="ent3#att13" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld47" name="oIDComic" type="string" attribute="ent3#att3" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#inu10">
+          <layout:Attribute attribute="ent3#att5"/>
+          <layout:Link link="sv2#page12#inu10#ln22"/>
+          <layout:Link link="sv2#page12#inu10#ln25"/>
+          <layout:Link link="sv2#page12#inu10#ln26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#dau9">
+          <layout:Attribute attribute="ent3#att5"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#enu11">
+          <layout:Field field="sv2#page12#enu11#fld47"/>
+          <layout:Field field="sv2#page12#enu11#fld42"/>
+          <layout:Field field="sv2#page12#enu11#fld43"/>
+          <layout:Field field="sv2#page12#enu11#fld41"/>
+          <layout:Field field="sv2#page12#enu11#fld44"/>
+          <layout:Field field="sv2#page12#enu11#fld45"/>
+          <layout:Field field="sv2#page12#enu11#fld46"/>
+          <layout:Link link="sv2#page12#enu11#ln27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

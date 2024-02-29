@@ -1,0 +1,63 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page11" name="Categorias" landmark="true" gr:x="1605" gr:y="90">
+  <ContentUnits>
+    <DataUnit id="sv2#page11#dau8" name="Categoria Seleccionada" gr:x="0" gr:y="0" entity="ent4" displayAll="true">
+      <Selector id="sv2#page11#dau8#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page11#dau8#su24#kcond24" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <IndexUnit id="sv2#page11#inu9" name="Lista Categor&#237;as" linkOrder="sv2#page11#inu9#ln18 sv2#page11#inu9#ln19 sv2#page11#inu9#ln20" gr:x="0" gr:y="125" entity="ent4" displayAttributes="ent4#att8">
+      <Link id="sv2#page11#inu9#ln18" name="Seleccionar" to="sv2#page11#dau8" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page11#inu9#ln19" name="Eliminar" to="sv2#dlu7" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page11#inu9#ln20" name="Editar" to="sv2#seu12" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <EntryUnit id="sv2#page11#enu10" name="Nueva Categor&#237;a" linkOrder="sv2#page11#enu10#ln21" gr:x="25" gr:y="230" fieldOrder="sv2#page11#enu10#fld38 sv2#page11#enu10#fld39 sv2#page11#enu10#fld40" entity="ent4">
+      <Field id="sv2#page11#enu10#fld38" name="oIDCategoria" type="string" preloaded="true"/>
+      <Field id="sv2#page11#enu10#fld39" name="Nombrecategoria" type="string" modifiable="true" attribute="ent4#att8" preloaded="true"/>
+      <Field id="sv2#page11#enu10#fld40" name="DescripcionCategoria" type="string" modifiable="true" attribute="ent4#att14" preloaded="true"/>
+      <Link id="sv2#page11#enu10#ln21" name="Guardar" to="sv2#inn6" type="normal" validate="true">
+        <LinkParameter id="sv2#page11#enu10#ln21#par6" name="oIDComic_Input" source="sv2#page11#enu10#fld38" target="sv2#inn6.isnotnull"/>
+        <LinkParameter id="sv2#page11#enu10#ln21#par7" name="DescripcionCategoria_PASSING" source="sv2#page11#enu10#fld40" passing="true"/>
+        <LinkParameter id="sv2#page11#enu10#ln21#par8" name="Nombrecategoria_PASSING" source="sv2#page11#enu10#fld39" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell>
+              <layout:Unit unitId="sv2#page11#dau8">
+                <layout:Attribute attribute="ent4#att8"/>
+                <layout:Attribute attribute="ent4#att14"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv2#page11#inu9">
+                <layout:Link link="sv2#page11#inu9#ln18"/>
+                <layout:Attribute attribute="ent4#att8"/>
+                <layout:Link link="sv2#page11#inu9#ln19"/>
+                <layout:Link link="sv2#page11#inu9#ln20"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv2#page11#enu10">
+                <layout:Field field="sv2#page11#enu10#fld38"/>
+                <layout:Field field="sv2#page11#enu10#fld39"/>
+                <layout:Field field="sv2#page11#enu10#fld40"/>
+                <layout:Link link="sv2#page11#enu10#ln21"/>
+              </layout:Unit>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
