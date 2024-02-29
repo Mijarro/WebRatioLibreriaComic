@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="privado" protected="true" homePage="sv2#page6" landmarks="sv2#lou1 sv2#page11 sv2#page12 sv2#page13">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="privado" protected="true" homePage="sv2#page6" landmarks="sv2#lou1 sv2#page11 sv2#page12 sv2#page13 sv2#page16">
   <OperationUnits>
     <LogoutUnit gr:x="425" gr:y="1210" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
     <CreateUnit gr:x="1245" gr:y="1150" id="sv2#cru1" name="Crear Usuario" entity="User">
@@ -44,7 +44,7 @@
       </Selector>
       <OKLink id="sv2#dlu4#oln20" name="OKFlow20" to="sv2#page6" automaticCoupling="true"/>
     </DeleteUnit>
-    <IsNotNullUnit id="sv2#inn5" name="Is Not Null1" gr:x="285" gr:y="510" emptyStringAsNull="true">
+    <IsNotNullUnit id="sv2#inn5" name="Is Not Null1" gr:x="335" gr:y="605" emptyStringAsNull="true">
       <KOLink id="sv2#inn5#kln6" name="KOFlow1" to="sv2#cru3">
         <LinkParameter id="sv2#inn5#kln6#par9" name="Autor_PASSING_Autor" sourceLinkParameter="sv2#page12#enu11#ln27#par44" target="sv2#cru3.ent3#att13"/>
         <LinkParameter id="sv2#inn5#kln6#par10" name="DescripcionComic_PASSING_DescripcionComic" sourceLinkParameter="sv2#page12#enu11#ln27#par45" target="sv2#cru3.ent3#att10"/>
@@ -61,24 +61,25 @@
         <LinkParameter id="sv2#inn5#oln21#par40" name="FechaPublicacion_PASSING_FechaPublicacion" sourceLinkParameter="sv2#page12#enu11#ln27#par47" target="sv2#mfu6.ent3#att12"/>
         <LinkParameter id="sv2#inn5#oln21#par41" name="Precio_PASSING_Precio" sourceLinkParameter="sv2#page12#enu11#ln27#par48" target="sv2#mfu6.ent3#att9"/>
         <LinkParameter id="sv2#inn5#oln21#par42" name="TituloComic_PASSING_TituloComic" sourceLinkParameter="sv2#page12#enu11#ln27#par49" target="sv2#mfu6.ent3#att5"/>
+        <LinkParameter id="sv2#inn5#oln21#par137" name="Proveedor_PASSING_Proveedor.oid(ComicToProveedor)" sourceLinkParameter="sv2#page12#enu11#ln27#par134" target="sv2#mfu6.rel4#role7.ent2#att2"/>
       </OKLink>
     </IsNotNullUnit>
-    <CreateUnit id="sv2#cru3" name="NuevoComic" gr:x="45" gr:y="530" entity="ent3">
+    <CreateUnit id="sv2#cru3" name="NuevoComic" gr:x="155" gr:y="590" entity="ent3">
       <OKLink id="sv2#cru3#oln22" name="OKFlow1" to="sv2#page12" automaticCoupling="true"/>
     </CreateUnit>
-    <DeleteUnit id="sv2#dlu5" name="Eliminar Proveedor" gr:x="665" gr:y="90" entity="ent2">
+    <DeleteUnit id="sv2#dlu5" name="Eliminar Proveedor" gr:x="695" gr:y="210" entity="ent2">
       <Selector id="sv2#dlu5#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu5#su26#kcond26" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#dlu5#oln23" name="OKFlow2" to="sv2#page13" automaticCoupling="true"/>
     </DeleteUnit>
-    <ModifyUnit id="sv2#mfu5" name="Update2" gr:x="1860" gr:y="490" entity="ent4">
+    <ModifyUnit id="sv2#mfu5" name="Update2" gr:x="1785" gr:y="450" entity="ent4">
       <Selector id="sv2#mfu5#su27" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu5#su27#kcond27" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#mfu5#oln24" name="OKFlow11" to="sv2#page11" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit id="sv2#seu10" name="SelectorComic" gr:x="470" gr:y="260" entity="ent3">
+    <SelectorUnit id="sv2#seu10" name="SelectorComic" gr:x="550" gr:y="210" entity="ent3">
       <Selector id="sv2#seu10#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#seu10#su28#kcond28" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -93,13 +94,13 @@
         <LinkParameter id="sv2#seu10#oln25#par58" name="TituloComic_TituloComic" source="ent3#att5Array" target="sv2#page12#enu11#fld42_slot"/>
       </OKLink>
     </SelectorUnit>
-    <ModifyUnit id="sv2#mfu6" name="Update2" gr:x="490" gr:y="490" entity="ent3">
+    <ModifyUnit id="sv2#mfu6" name="Update2" gr:x="475" gr:y="575" entity="ent3">
       <Selector id="sv2#mfu6#su29" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu6#su29#kcond29" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv2#mfu6#oln26" name="OKFlow11" to="sv2#page12" automaticCoupling="true"/>
+      <OKLink id="sv2#mfu6#oln47" name="OKFlow47" to="sv2#page12" automaticCoupling="true"/>
     </ModifyUnit>
-    <IsNotNullUnit id="sv2#inn6" name="Is Not Null1" gr:x="1670" gr:y="505" emptyStringAsNull="true">
+    <IsNotNullUnit id="sv2#inn6" name="Is Not Null1" gr:x="1605" gr:y="470" emptyStringAsNull="true">
       <KOLink id="sv2#inn6#kln7" name="KOFlow1" to="sv2#cru5">
         <LinkParameter id="sv2#inn6#kln7#par59" name="DescripcionCategoria_PASSING_DescripcionCategoria" sourceLinkParameter="sv2#page11#enu10#ln21#par7" target="sv2#cru5.ent4#att14"/>
         <LinkParameter id="sv2#inn6#kln7#par60" name="Nombrecategoria_PASSING_Nombrecategoria" sourceLinkParameter="sv2#page11#enu10#ln21#par8" target="sv2#cru5.ent4#att8"/>
@@ -110,13 +111,13 @@
         <LinkParameter id="sv2#inn6#oln27#par63" name="Nombrecategoria_PASSING_Nombrecategoria" sourceLinkParameter="sv2#page11#enu10#ln21#par8" target="sv2#mfu5.ent4#att8"/>
       </OKLink>
     </IsNotNullUnit>
-    <DeleteUnit id="sv2#dlu6" name="EliminarComic" gr:x="30" gr:y="235" entity="ent3">
+    <DeleteUnit id="sv2#dlu6" name="EliminarComic" gr:x="100" gr:y="210" entity="ent3">
       <Selector id="sv2#dlu6#su30" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu6#su30#kcond30" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#dlu6#oln28" name="OKFlow2" to="sv2#page12" automaticCoupling="true"/>
     </DeleteUnit>
-    <SelectorUnit id="sv2#seu11" name="SelectorComic" gr:x="1200" gr:y="230" entity="ent2">
+    <SelectorUnit id="sv2#seu11" name="SelectorComic" gr:x="1165" gr:y="210" entity="ent2">
       <Selector id="sv2#seu11#su31" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#seu11#su31#kcond31" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -127,7 +128,7 @@
         <LinkParameter id="sv2#seu11#oln29#par67" name="TelefonoProveedor_TelefonoProveedor" source="ent2#att16Array" target="sv2#page13#enu12#fld50_slot"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit id="sv2#inn7" name="Is Not Null1" gr:x="950" gr:y="540" emptyStringAsNull="true">
+    <IsNotNullUnit id="sv2#inn7" name="Is Not Null1" gr:x="960" gr:y="490" emptyStringAsNull="true">
       <KOLink id="sv2#inn7#kln8" name="KOFlow1" to="sv2#cru4">
         <LinkParameter id="sv2#inn7#kln8#par68" name="EmailProveedor_PASSING_EmailProveedor" sourceLinkParameter="sv2#page13#enu12#ln31#par76" target="sv2#cru4.ent2#att15"/>
         <LinkParameter id="sv2#inn7#kln8#par69" name="NombreProveedor_PASSING_NombreProveedor" sourceLinkParameter="sv2#page13#enu12#ln31#par77" target="sv2#cru4.ent2#att4"/>
@@ -140,22 +141,22 @@
         <LinkParameter id="sv2#inn7#oln30#par74" name="TelefonoProveedor_PASSING_TelefonoProveedor" sourceLinkParameter="sv2#page13#enu12#ln31#par79" target="sv2#mfu7.ent2#att16"/>
       </OKLink>
     </IsNotNullUnit>
-    <DeleteUnit id="sv2#dlu7" name="Eliminar Categoria" gr:x="1390" gr:y="220" entity="ent4">
+    <DeleteUnit id="sv2#dlu7" name="Eliminar Categoria" gr:x="1330" gr:y="210" entity="ent4">
       <Selector id="sv2#dlu7#su32" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu7#su32#kcond32" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#dlu7#oln31" name="OKFlow2" to="sv2#page11" automaticCoupling="true"/>
     </DeleteUnit>
-    <CreateUnit id="sv2#cru4" name="Nuevo Proveedor" gr:x="720" gr:y="510" entity="ent2">
+    <CreateUnit id="sv2#cru4" name="Nuevo Proveedor" gr:x="745" gr:y="475" entity="ent2">
       <OKLink id="sv2#cru4#oln32" name="OKFlow5" to="sv2#page13" automaticCoupling="true"/>
     </CreateUnit>
-    <ModifyUnit id="sv2#mfu7" name="Update2" gr:x="1200" gr:y="480" entity="ent2">
+    <ModifyUnit id="sv2#mfu7" name="Update2" gr:x="1150" gr:y="470" entity="ent2">
       <Selector id="sv2#mfu7#su34" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu7#su34#kcond34" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#mfu7#oln33" name="OKFlow11" to="sv2#page13" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit id="sv2#seu12" name="SelectorComic" gr:x="1900" gr:y="265" entity="ent4">
+    <SelectorUnit id="sv2#seu12" name="SelectorComic" gr:x="1790" gr:y="210" entity="ent4">
       <Selector id="sv2#seu12#su35" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#seu12#su35#kcond35" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -166,8 +167,19 @@
         <LinkParameter id="sv2#seu12#oln34#par83" name="oid_oIDCategoria" source="ent4#att6Array" target="sv2#page11#enu10#fld38_slot"/>
       </OKLink>
     </SelectorUnit>
-    <CreateUnit id="sv2#cru5" name="Nuevo Proveedor" gr:x="1450" gr:y="510" entity="ent4">
+    <CreateUnit id="sv2#cru5" name="Nuevo Proveedor" gr:x="1390" gr:y="455" entity="ent4">
       <OKLink id="sv2#cru5#oln35" name="OKFlow5" to="sv2#page11" automaticCoupling="true"/>
     </CreateUnit>
+    <SelectorUnit id="sv2#seu15" name="SelectorComic" gr:x="1850" gr:y="900" entity="ent4" linkOrder="sv2#seu15#ln43">
+      <Selector id="sv2#seu15#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#seu15#su45#kcond45" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#seu15#ln43" name="Flow43" to="sv2#page16#mdu1" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <ModifyUnit gr:x="515" gr:y="695" id="sv2#mfu10" name="Update10" entity="ent2">
+      <Selector id="sv2#mfu10#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu10#su47#kcond46" name="KeyCondition46" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>

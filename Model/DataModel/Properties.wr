@@ -46,7 +46,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="300" gr:y="635" id="ent2" name="Proveedor" duration="persistent" db:database="db2" db:table="proveedor" attributeOrder="ent2#att2 ent2#att4 ent2#att15 ent2#att16">
+  <Entity gr:x="185" gr:y="635" id="ent2" name="Proveedor" duration="persistent" db:database="db2" db:table="proveedor" attributeOrder="ent2#att2 ent2#att4 ent2#att15 ent2#att16">
     <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att4" name="NombreProveedor" type="string" db:column="nombreproveedor"/>
     <Attribute id="ent2#att15" name="EmailProveedor" type="string" db:column="emailproveedor"/>
@@ -61,14 +61,6 @@
     <Attribute id="ent3#att12" name="FechaPublicacion" type="date" db:column="fechapublicacion"/>
     <Attribute id="ent3#att13" name="Autor" type="string" db:column="autor"/>
   </Entity>
-  <Relationship id="rel1" name="Proveedor_Comic" sourceEntity="ent2" targetEntity="ent3" db:database="db2" db:table="proveedor">
-    <RelationshipRole1 id="rel1#role1" name="ProveedorToComic" maxCard="1">
-      <db:JoinColumn attribute="ent2#att2" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role2" name="ComicToProveedor" maxCard="N">
-      <db:JoinColumn attribute="ent3#att3" name="comic_oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public">
   </db:Database>
   <Entity gr:x="570" gr:y="435" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
@@ -82,6 +74,14 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel2#role4" name="ComicToCategorias" maxCard="N">
       <db:JoinColumn attribute="ent3#att3" name="comic_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel4" name="Comic_Proveedor" sourceEntity="ent3" targetEntity="ent2" db:database="db2" db:table="comic">
+    <RelationshipRole1 id="rel4#role7" name="ComicToProveedor" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="ent3#att3" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="ProveedorToComic" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="proveedor_oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>
