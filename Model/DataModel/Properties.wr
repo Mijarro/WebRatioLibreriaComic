@@ -5,11 +5,11 @@
     <Attribute name="password" id="password" type="password" db:column="password"/>
     <Attribute name="email" id="email" type="string" db:column="email"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="300" gr:y="140" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="472" gr:y="167" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="600" gr:y="175" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -46,7 +46,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="300" gr:y="635" id="ent2" name="Proveedor" duration="persistent" db:database="db2" db:table="proveedor" attributeOrder="ent2#att2 ent2#att4 ent2#att15 ent2#att16">
+  <Entity gr:x="160" gr:y="630" id="ent2" name="Proveedor" duration="persistent" db:database="db2" db:table="proveedor" attributeOrder="ent2#att2 ent2#att4 ent2#att15 ent2#att16">
     <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att4" name="NombreProveedor" type="string" db:column="nombreproveedor"/>
     <Attribute id="ent2#att15" name="EmailProveedor" type="string" db:column="emailproveedor"/>
@@ -69,8 +69,7 @@
       <db:JoinColumn attribute="ent3#att3" name="comic_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public">
-  </db:Database>
+  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public"/>
   <Entity gr:x="570" gr:y="435" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
     <Attribute id="ent4#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att8" name="Nombrecategoria" type="string" db:column="nombrecategoria"/>
