@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="800" gr:y="350" id="sv2#page6" name="Zona Privada">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="515" gr:y="845" id="sv2#page6" name="Zona Privada">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv2#page6#inu5" name="Lista de Usuarios" entity="User" displayAttributes="userName email password" linkOrder="sv2#page6#inu5#ln10 sv2#page6#inu5#ln15 sv2#page6#inu5#ln17">
       <Link id="sv2#page6#inu5#ln10" name="Actualizar" to="sv2#seu6" automaticCoupling="true" type="normal" validate="true"/>

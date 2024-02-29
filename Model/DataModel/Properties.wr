@@ -69,8 +69,9 @@
       <db:JoinColumn attribute="ent3#att3" name="comic_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public"/>
-  <Entity gr:x="580" gr:y="405" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
+  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public">
+  </db:Database>
+  <Entity gr:x="570" gr:y="435" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
     <Attribute id="ent4#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att8" name="Nombrecategoria" type="string" db:column="nombrecategoria"/>
     <Attribute id="ent4#att14" name="DescripcionCategoria" type="string" db:column="descripcioncategoria"/>
