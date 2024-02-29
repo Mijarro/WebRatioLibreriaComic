@@ -1,12 +1,68 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="110" gr:y="45" id="sv3#page4" name="Home" landmark="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-75" gr:y="-115" id="sv3#page4" name="Home" landmark="false">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv3#page4#inu3" name="Simple List3" entity="ent3" displayAttributes="ent3#att3 ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13"/>
+    <IndexUnit gr:x="0" gr:y="0" id="sv3#page4#inu3" name="Listado de Comics" entity="ent3" displayAttributes="ent3#att3 ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13"/>
+    <EntryUnit id="sv3#page4#enu2" name="Buscar Comic" gr:x="10" gr:y="225" fieldOrder="sv3#page4#enu2#fld4 sv3#page4#enu2#fld5" linkOrder="sv3#page4#enu2#ln8">
+      <Field id="sv3#page4#enu2#fld4" name="Texto para buscar Titulo" type="string" modifiable="true"/>
+      <Field id="sv3#page4#enu2#fld5" name="Texto para buscar Autor" type="string" modifiable="true"/>
+      <Link id="sv3#page4#enu2#ln8" name="Flow8" to="sv3#seu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page4#enu2#ln8#par93" name="Texto para buscar Autor_que tenga autor" source="sv3#page4#enu2#fld5" target="sv3#seu4#su5#acond6"/>
+        <LinkParameter id="sv3#page4#enu2#ln8#par94" name="Texto para buscar Titulo_que tenga titulo" source="sv3#page4#enu2#fld4" target="sv3#seu4#su5#acond5"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit id="sv3#page4#inu2" name="Listado Comics" gr:x="179" gr:y="203" entity="ent3" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
+      <Selector id="sv3#page4#inu2#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page4#inu2#su4#kcond2" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page4#inu3">
           <layout:Attribute attribute="ent3#att3"/>
+          <layout:Attribute attribute="ent3#att5"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page4#enu2">
+          <layout:Field field="sv3#page4#enu2#fld4"/>
+          <layout:Field field="sv3#page4#enu2#fld5"/>
+          <layout:Link link="sv3#page4#enu2#ln8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page4#inu2">
           <layout:Attribute attribute="ent3#att5"/>
           <layout:Attribute attribute="ent3#att9"/>
           <layout:Attribute attribute="ent3#att10"/>

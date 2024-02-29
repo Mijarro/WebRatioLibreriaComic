@@ -1,0 +1,62 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="170" gr:y="860" id="sv3#page2" name="Buscador de Comics" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="5" id="sv3#page2#enu1" name="Buscar Comic" linkOrder="sv3#page2#enu1#ln2" fieldOrder="sv3#page2#enu1#fld2 sv3#page2#enu1#fld3">
+      <Field id="sv3#page2#enu1#fld2" name="Texto para buscar Titulo" type="string" modifiable="true"/>
+      <Link id="sv3#page2#enu1#ln2" name="Buscar" to="sv3#seu2" type="normal" validate="true">
+        <LinkParameter id="sv3#page2#enu1#ln2#par85" name="Texto para buscar_que tenga" source="sv3#page2#enu1#fld2" target="sv3#seu2#su2#acond1"/>
+        <LinkParameter id="sv3#page2#enu1#ln2#par86" name="Texto para buscar Autor_que tenga autor" source="sv3#page2#enu1#fld3" target="sv3#seu2#su2#acond2"/>
+      </Link>
+      <Field id="sv3#page2#enu1#fld3" name="Texto para buscar Autor" type="string" modifiable="true"/>
+    </EntryUnit>
+    <IndexUnit gr:x="195" gr:y="0" id="sv3#page2#inu1" name="Listado Comics" entity="ent3" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
+      <Selector id="sv3#page2#inu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page2#inu1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page2#enu1">
+          <layout:Field field="sv3#page2#enu1#fld2"/>
+          <layout:Field field="sv3#page2#enu1#fld3"/>
+          <layout:Link link="sv3#page2#enu1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page2#inu1">
+          <layout:Attribute attribute="ent3#att5"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

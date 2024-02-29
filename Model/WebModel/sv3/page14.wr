@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page14" name="Comics" linkVisibilityPolicy="always" landmark="true" gr:x="165" gr:y="515">
   <ContentUnits>
-    <IndexUnit id="sv3#page14#inu12" name="Lista Comics" linkOrder="sv3#page14#inu12#ln32 sv3#page14#inu12#ln34" gr:x="20" gr:y="130" entity="ent3" displayAttributes="ent3#att5">
+    <IndexUnit id="sv3#page14#inu12" name="Lista de Comics" linkOrder="sv3#page14#inu12#ln32 sv3#page14#inu12#ln34" gr:x="20" gr:y="130" entity="ent3" displayAttributes="ent3#att5">
       <Link id="sv3#page14#inu12#ln32" name="Seleccionar" to="sv3#page14#dau11" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv3#page14#inu12#ln34" name="Editar" to="sv3#seu13" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>

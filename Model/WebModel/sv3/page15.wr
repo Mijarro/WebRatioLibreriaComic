@@ -5,7 +5,7 @@
         <KeyCondition id="sv3#page15#dau12#su40#kcond40" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <IndexUnit id="sv3#page15#inu13" name="Lista Categor&#237;as" linkOrder="sv3#page15#inu13#ln36 sv3#page15#inu13#ln38" gr:x="0" gr:y="125" entity="ent4" displayAttributes="ent4#att8">
+    <IndexUnit id="sv3#page15#inu13" name="Lista de Categor&#237;as" linkOrder="sv3#page15#inu13#ln36 sv3#page15#inu13#ln38" gr:x="0" gr:y="125" entity="ent4" displayAttributes="ent4#att8">
       <Link id="sv3#page15#inu13#ln36" name="Seleccionar" to="sv3#page15#dau12" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv3#page15#inu13#ln38" name="Editar" to="sv3#seu14" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
