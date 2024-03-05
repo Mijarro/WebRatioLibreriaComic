@@ -5,7 +5,7 @@
       <Link id="sv2#page12#inu10#ln25" name="Eliminar" to="sv2#dlu6" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page12#inu10#ln26" name="Editar" to="sv2#seu10" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
-    <DataUnit id="sv2#page12#dau9" name="Comic Seleccionado" gr:x="65" gr:y="0" entity="ent3" displayAll="true">
+    <DataUnit id="sv2#page12#dau9" name="Comic Seleccionado" gr:x="70" gr:y="0" entity="ent3" displayAll="true">
       <Selector id="sv2#page12#dau9#su25" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page12#dau9#su25#kcond25" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>

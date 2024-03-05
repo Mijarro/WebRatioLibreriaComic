@@ -25,17 +25,10 @@
     </SelectorUnit>
     <SelectorUnit gr:x="260" gr:y="1065" id="sv3#seu2" name="Selector2" entity="ent3">
       <Selector id="sv3#seu2#su2" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#seu2#su2#acond1" name="que tenga titulo" predicate="contains" booleanOperator="and" implied="false" attributes="ent3#att5" ignoreCase="true"/>
-        <AttributesCondition id="sv3#seu2#su2#acond2" name="que tenga autor" predicate="contains" booleanOperator="or" implied="false" ignoreCase="true" attributes="ent3#att13"/>
+        <AttributesCondition id="sv3#seu2#su2#acond1" name="que tenga titulo" predicate="contains" booleanOperator="and" implied="true" attributes="ent3#att5" ignoreCase="true"/>
+        <AttributesCondition id="sv3#seu2#su2#acond2" name="que tenga autor" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent3#att13"/>
       </Selector>
       <OKLink id="sv3#seu2#oln2" name="OKFlow2" to="sv3#page2#inu1" automaticCoupling="true"/>
-    </SelectorUnit>
-    <SelectorUnit id="sv3#seu4" name="Selector2" gr:x="-45" gr:y="290" entity="ent3">
-      <Selector id="sv3#seu4#su5" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#seu4#su5#acond5" name="que tenga titulo" predicate="contains" booleanOperator="and" implied="false" attributes="ent3#att5" ignoreCase="true"/>
-        <AttributesCondition id="sv3#seu4#su5#acond6" name="que tenga autor" predicate="contains" booleanOperator="or" implied="false" ignoreCase="true" attributes="ent3#att13"/>
-      </Selector>
-      <OKLink id="sv3#seu4#oln5" name="OKFlow5" to="sv3#page4#inu2" automaticCoupling="true"/>
     </SelectorUnit>
   </OperationUnits>
 </SiteView>
