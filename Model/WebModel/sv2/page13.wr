@@ -5,8 +5,8 @@
         <KeyCondition id="sv2#page13#dau10#su33#kcond33" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <IndexUnit id="sv2#page13#inu11" name="Lista Proveedores" linkOrder="sv2#page13#inu11#ln28 sv2#page13#inu11#ln29 sv2#page13#inu11#ln30" gr:x="10" gr:y="135" entity="ent2" displayAttributes="ent2#att4">
-      <Link id="sv2#page13#inu11#ln28" name="Seleccionar" to="sv2#page13#dau10" type="normal" automaticCoupling="true" validate="true"/>
+    <IndexUnit id="sv2#page13#inu11" name="Lista Proveedores" linkOrder="sv2#page13#inu11#ln28 sv2#page13#inu11#ln29 sv2#page13#inu11#ln30" gr:x="25" gr:y="135" entity="ent2" displayAttributes="ent2#att4">
+      <Link id="sv2#page13#inu11#ln28" name="Detalles" to="sv2#page13#dau10" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page13#inu11#ln29" name="Eliminar" to="sv2#dlu5" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page13#inu11#ln30" name="Editar" to="sv2#seu11" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
@@ -42,11 +42,11 @@
                 <layout:Link link="sv2#page13#inu11#ln30"/>
               </layout:Unit>
               <layout:Unit unitId="sv2#page13#enu12">
+                <layout:Link link="sv2#page13#enu12#ln31"/>
                 <layout:Field field="sv2#page13#enu12#fld51"/>
                 <layout:Field field="sv2#page13#enu12#fld48"/>
                 <layout:Field field="sv2#page13#enu12#fld49"/>
                 <layout:Field field="sv2#page13#enu12#fld50"/>
-                <layout:Link link="sv2#page13#enu12#ln31"/>
               </layout:Unit>
             </layout:Cell>
           </layout:Row>

@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page16" name="Categorias" landmark="true" gr:x="1540" gr:y="745">
+  <ContentUnits>
+    <DataUnit id="sv2#page16#dau13" name="Categoria Seleccionada" gr:x="0" gr:y="0" entity="ent4" displayAll="true">
+      <Selector id="sv2#page16#dau13#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page16#dau13#su44#kcond44" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <IndexUnit id="sv2#page16#inu14" name="Lista Categor&#237;as" linkOrder="sv2#page16#inu14#ln40 sv2#page16#inu14#ln41" gr:x="25" gr:y="125" entity="ent4" displayAttributes="ent4#att8">
+      <Link id="sv2#page16#inu14#ln40" name="Seleccionar" to="sv2#page16#dau13" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page16#inu14#ln41" name="Buscar C&#243;mics" to="sv2#seu15" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <MultiDataUnit gr:x="20" gr:y="230" id="sv2#page16#mdu1" name="MultipleDetails1" entity="ent3" displayAttributes="ent3#att5 ent3#att13 ent3#att12 ent3#att11 ent3#att10 ent3#att9">
+      <Selector id="sv2#page16#mdu1#su46" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page16#mdu1#su46#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell>
+              <layout:Unit unitId="sv2#page16#dau13">
+                <layout:Attribute attribute="ent4#att8"/>
+                <layout:Attribute attribute="ent4#att14"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv2#page16#inu14">
+                <layout:Link link="sv2#page16#inu14#ln40"/>
+                <layout:Attribute attribute="ent4#att8"/>
+                <layout:Link link="sv2#page16#inu14#ln41"/>
+              </layout:Unit>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page16#mdu1">
+          <layout:Attribute attribute="ent3#att5"/>
+          <layout:Attribute attribute="ent3#att13"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

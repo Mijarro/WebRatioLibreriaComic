@@ -83,4 +83,12 @@
       <db:JoinColumn attribute="ent3#att3" name="comic_oid"/>
     </RelationshipRole2>
   </Relationship>
+  <Relationship id="rel4" name="Comic_Proveedor" sourceEntity="ent3" targetEntity="ent2" db:database="db2" db:table="comic">
+    <RelationshipRole1 id="rel4#role7" name="ComicToProveedor" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="ent3#att3" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="ProveedorToComic" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="proveedor_oid"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>
