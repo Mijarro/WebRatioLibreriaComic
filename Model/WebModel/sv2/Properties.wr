@@ -52,6 +52,7 @@
         <LinkParameter id="sv2#inn5#kln6#par13" name="FechaPublicacion_PASSING_FechaPublicacion" sourceLinkParameter="sv2#page12#enu11#ln27#par47" target="sv2#cru3.ent3#att12"/>
         <LinkParameter id="sv2#inn5#kln6#par33" name="Precio_PASSING_Precio" sourceLinkParameter="sv2#page12#enu11#ln27#par48" target="sv2#cru3.ent3#att9"/>
         <LinkParameter id="sv2#inn5#kln6#par35" name="TituloComic_PASSING_TituloComic" sourceLinkParameter="sv2#page12#enu11#ln27#par49" target="sv2#cru3.ent3#att5"/>
+        <LinkParameter id="sv2#inn5#kln6#par86" name="ComicToCategorias_PASSING_Categorias.oid(ComicToCategorias)" sourceLinkParameter="sv2#page12#enu11#ln27#par84" target="sv2#cru3.rel2#role4.ent4#att6"/>
       </KOLink>
       <OKLink id="sv2#inn5#oln21" name="OKFlow10" to="sv2#mfu6">
         <LinkParameter id="sv2#inn5#oln21#par36" name="Input Value_KeyCondition5 [oid]" source="inputValue" target="sv2#mfu6#su29#kcond29.ent3#att3"/>
@@ -62,6 +63,7 @@
         <LinkParameter id="sv2#inn5#oln21#par41" name="Precio_PASSING_Precio" sourceLinkParameter="sv2#page12#enu11#ln27#par48" target="sv2#mfu6.ent3#att9"/>
         <LinkParameter id="sv2#inn5#oln21#par42" name="TituloComic_PASSING_TituloComic" sourceLinkParameter="sv2#page12#enu11#ln27#par49" target="sv2#mfu6.ent3#att5"/>
         <LinkParameter id="sv2#inn5#oln21#par137" name="Proveedor_PASSING_Proveedor.oid(ComicToProveedor)" sourceLinkParameter="sv2#page12#enu11#ln27#par134" target="sv2#mfu6.rel4#role7.ent2#att2"/>
+        <LinkParameter id="sv2#inn5#oln21#par85" name="ComicToCategorias_PASSING_Categorias.oid(ComicToCategorias)" sourceLinkParameter="sv2#page12#enu11#ln27#par84" target="sv2#mfu6.rel2#role4.ent4#att6"/>
       </OKLink>
     </IsNotNullUnit>
     <CreateUnit id="sv2#cru3" name="NuevoComic" gr:x="155" gr:y="590" entity="ent3">
@@ -92,6 +94,7 @@
         <LinkParameter id="sv2#seu10#oln25#par56" name="oid_oid" source="ent3#att3Array" target="sv2#page12#enu11#fld47_slot"/>
         <LinkParameter id="sv2#seu10#oln25#par57" name="Precio_Precio" source="ent3#att9Array" target="sv2#page12#enu11#fld41_slot"/>
         <LinkParameter id="sv2#seu10#oln25#par58" name="TituloComic_TituloComic" source="ent3#att5Array" target="sv2#page12#enu11#fld42_slot"/>
+        <LinkParameter id="sv2#seu10#oln25#par87" name="ComicToProveedor.oid_Proveedor - Preselection" source="rel4#role7_ent2#att2Array" target="sv2#page12#enu11#sfld3_presel"/>
       </OKLink>
     </SelectorUnit>
     <ModifyUnit id="sv2#mfu6" name="Update2" gr:x="475" gr:y="575" entity="ent3">
@@ -117,7 +120,7 @@
       </Selector>
       <OKLink id="sv2#dlu6#oln28" name="OKFlow2" to="sv2#page12" automaticCoupling="true"/>
     </DeleteUnit>
-    <SelectorUnit id="sv2#seu11" name="SelectorComic" gr:x="1165" gr:y="210" entity="ent2">
+    <SelectorUnit id="sv2#seu11" name="SelectorProveedor" gr:x="1165" gr:y="210" entity="ent2">
       <Selector id="sv2#seu11#su31" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#seu11#su31#kcond31" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -156,7 +159,7 @@
       </Selector>
       <OKLink id="sv2#mfu7#oln33" name="OKFlow11" to="sv2#page13" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit id="sv2#seu12" name="SelectorComic" gr:x="1790" gr:y="210" entity="ent4">
+    <SelectorUnit id="sv2#seu12" name="SelectorCategoria" gr:x="1790" gr:y="210" entity="ent4">
       <Selector id="sv2#seu12#su35" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#seu12#su35#kcond35" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>

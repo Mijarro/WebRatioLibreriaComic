@@ -61,8 +61,7 @@
     <Attribute id="ent3#att12" name="FechaPublicacion" type="date" db:column="fechapublicacion"/>
     <Attribute id="ent3#att13" name="Autor" type="string" db:column="autor"/>
   </Entity>
-  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public">
-  </db:Database>
+  <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public"/>
   <Entity gr:x="570" gr:y="435" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
     <Attribute id="ent4#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att8" name="Nombrecategoria" type="string" db:column="nombrecategoria"/>

@@ -21,6 +21,7 @@
         <LinkParameter id="sv2#page12#enu11#ln27#par49" name="TituloComic_PASSING" source="sv2#page12#enu11#fld42" passing="true"/>
         <LinkParameter id="sv2#page12#enu11#ln27#par50" name="oIDComic_PASSING" source="sv2#page12#enu11#fld47" passing="true"/>
         <LinkParameter id="sv2#page12#enu11#ln27#par134" name="Proveedor_PASSING" source="sv2#page12#enu11#sfld3" passing="true"/>
+        <LinkParameter id="sv2#page12#enu11#ln27#par84" name="ComicToCategorias_PASSING" source="sv2#page12#enu11#msfld1" passing="true"/>
       </Link>
       <Field id="sv2#page12#enu11#fld41" name="Precio" type="float" modifiable="true" preloaded="true"/>
       <Field id="sv2#page12#enu11#fld42" name="TituloComic" type="string" modifiable="true" attribute="ent3#att5" preloaded="true"/>
