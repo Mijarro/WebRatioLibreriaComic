@@ -179,10 +179,5 @@
       </Selector>
       <Link id="sv2#seu15#ln43" name="Flow43" to="sv2#page16#mdu1" automaticCoupling="true" type="transport" validate="true"/>
     </SelectorUnit>
-    <ModifyUnit gr:x="515" gr:y="695" id="sv2#mfu10" name="Update10" entity="ent2">
-      <Selector id="sv2#mfu10#su47" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#mfu10#su47#kcond46" name="KeyCondition46" predicate="in" implied="false"/>
-      </Selector>
-    </ModifyUnit>
   </OperationUnits>
 </SiteView>
