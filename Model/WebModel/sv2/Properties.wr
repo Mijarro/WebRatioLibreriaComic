@@ -1,10 +1,10 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="privado" protected="true" homePage="sv2#page6" landmarks="sv2#lou1 sv2#page11 sv2#page12 sv2#page13 sv2#page16">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="privado" protected="true" homePage="sv2#page6" landmarks="sv2#lou1 sv2#page11 sv2#page12 sv2#page13 sv2#page8">
   <OperationUnits>
-    <LogoutUnit gr:x="425" gr:y="1210" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
-    <CreateUnit gr:x="1245" gr:y="1150" id="sv2#cru1" name="Crear Usuario" entity="User">
+    <LogoutUnit gr:x="70" gr:y="1165" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
+    <CreateUnit gr:x="985" gr:y="790" id="sv2#cru1" name="Crear Usuario" entity="User">
       <OKLink id="sv2#cru1#oln1" name="OKFlow1" to="sv2#page6" automaticCoupling="true"/>
     </CreateUnit>
-    <SelectorUnit gr:x="670" gr:y="685" id="sv2#seu6" name="Selector6" entity="User">
+    <SelectorUnit gr:x="415" gr:y="905" id="sv2#seu6" name="Selector6" entity="User">
       <OKLink id="sv2#seu6#oln7" name="OKFlow7" to="sv2#page6#enu5">
         <LinkParameter id="sv2#seu6#oln7#par12" name="email_email" source="emailArray" target="sv2#page6#enu5#fld19_slot"/>
         <LinkParameter id="sv2#seu6#oln7#par14" name="oid_OID_User" source="userOIDArray" target="sv2#page6#enu5#fld20_slot"/>
@@ -16,7 +16,7 @@
         <KeyCondition id="sv2#seu6#su13#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="1200" gr:y="900" id="sv2#inn4" name="Is Not Null4">
+    <IsNotNullUnit gr:x="995" gr:y="925" id="sv2#inn4" name="Is Not Null4" emptyStringAsNull="true">
       <OKLink id="sv2#inn4#oln9" name="OKFlow9" to="sv2#mfu4">
         <LinkParameter id="sv2#inn4#oln9#par22" name="email_PASSING_email" sourceLinkParameter="sv2#page6#enu5#ln11#par18" target="sv2#mfu4.email"/>
         <LinkParameter id="sv2#inn4#oln9#par23" name="password_PASSING_password" sourceLinkParameter="sv2#page6#enu5#ln11#par20" target="sv2#mfu4.password"/>
@@ -27,18 +27,17 @@
       <KOLink id="sv2#inn4#kln5" name="KOFlow5" to="sv2#cru1">
         <LinkParameter id="sv2#inn4#kln5#par27" name="email_PASSING_email" sourceLinkParameter="sv2#page6#enu5#ln11#par18" target="sv2#cru1.email"/>
         <LinkParameter id="sv2#inn4#kln5#par28" name="defaultGroup_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv2#page6#enu5#ln11#par25" target="sv2#cru1.User2DefaultGroup.groupOID"/>
-        <LinkParameter id="sv2#inn4#kln5#par29" name="Key [oid]_PASSING_oid" sourceLinkParameter="sv2#page6#enu5#ln11#par19" target="sv2#cru1.userOID"/>
         <LinkParameter id="sv2#inn4#kln5#par30" name="password_PASSING_password" sourceLinkParameter="sv2#page6#enu5#ln11#par20" target="sv2#cru1.password"/>
         <LinkParameter id="sv2#inn4#kln5#par31" name="userName_PASSING_userName" sourceLinkParameter="sv2#page6#enu5#ln11#par21" target="sv2#cru1.userName"/>
       </KOLink>
     </IsNotNullUnit>
-    <ModifyUnit gr:x="1080" gr:y="1160" id="sv2#mfu4" name="Update4" entity="User">
+    <ModifyUnit gr:x="1000" gr:y="1030" id="sv2#mfu4" name="Update4" entity="User">
       <Selector id="sv2#mfu4#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu4#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#mfu4#oln19" name="OKFlow19" to="sv2#page6" automaticCoupling="true"/>
     </ModifyUnit>
-    <DeleteUnit gr:x="345" gr:y="950" id="sv2#dlu4" name="Borrar usuario" entity="User">
+    <DeleteUnit gr:x="395" gr:y="1050" id="sv2#dlu4" name="Borrar usuario" entity="User">
       <Selector id="sv2#dlu4#su16" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu4#su16#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
       </Selector>
@@ -173,11 +172,16 @@
     <CreateUnit id="sv2#cru5" name="Nuevo Proveedor" gr:x="1390" gr:y="455" entity="ent4">
       <OKLink id="sv2#cru5#oln35" name="OKFlow5" to="sv2#page11" automaticCoupling="true"/>
     </CreateUnit>
-    <SelectorUnit id="sv2#seu15" name="SelectorComic" gr:x="1850" gr:y="900" entity="ent4" linkOrder="sv2#seu15#ln43">
-      <Selector id="sv2#seu15#su45" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#seu15#su45#kcond45" name="KeyCondition4" predicate="in" implied="false"/>
-      </Selector>
-      <Link id="sv2#seu15#ln43" name="Flow43" to="sv2#page16#mdu1" automaticCoupling="true" type="transport" validate="true"/>
-    </SelectorUnit>
+    <PasswordUnit gr:x="1040" gr:y="1310" id="sv2#pwu1" name="Password1" passwordSize="8" minLowerCaseCharacters="1" minUpperCaseCharacters="1" minDigits="1" linkOrder="sv2#pwu1#ln16">
+      <OKLink id="sv2#pwu1#oln4" name="OKFlow4" to="sv2#tmu1" automaticCoupling="true"/>
+      <Link id="sv2#pwu1#ln16" name="Flow16" to="sv2#cru1" type="transport" validate="true" gr:bendpoints="73,-287,119,219">
+        <LinkParameter id="sv2#pwu1#ln16#par100" name="Generated Password_password" source="password" target="sv2#cru1.password"/>
+      </Link>
+    </PasswordUnit>
+    <TimeUnit gr:x="1225" gr:y="1025" id="sv2#tmu1" name="Time1">
+      <OKLink id="sv2#tmu1#oln5" name="OKFlow5" to="sv2#cru1">
+        <LinkParameter id="sv2#tmu1#oln5#par99" name="Current/Input Timestamp_fecha_alta" source="currentTimestamp" target="sv2#cru1.User#att7"/>
+      </OKLink>
+    </TimeUnit>
   </OperationUnits>
 </SiteView>
