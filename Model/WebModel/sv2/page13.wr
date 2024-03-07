@@ -10,11 +10,11 @@
       <Link id="sv2#page13#inu11#ln29" name="Eliminar" to="sv2#dlu5" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page13#inu11#ln30" name="Editar" to="sv2#seu11" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
-    <EntryUnit id="sv2#page13#enu12" name="Nuevo Proveedor" linkOrder="sv2#page13#enu12#ln31" gr:x="20" gr:y="255" fieldOrder="sv2#page13#enu12#fld51 sv2#page13#enu12#fld48 sv2#page13#enu12#fld49 sv2#page13#enu12#fld50" entity="ent2">
-      <Field id="sv2#page13#enu12#fld48" name="NombreProveedor" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
-      <Field id="sv2#page13#enu12#fld49" name="EmailProveedor" type="string" modifiable="true" attribute="ent2#att15" preloaded="true"/>
-      <Field id="sv2#page13#enu12#fld50" name="TelefonoProveedor" type="integer" modifiable="true" attribute="ent2#att16" preloaded="true"/>
-      <Field id="sv2#page13#enu12#fld51" name="oIDProveedor" type="string" attribute="ent2#att2" preloaded="true"/>
+    <EntryUnit id="sv2#page13#enu12" name="Nuevo Proveedor" linkOrder="sv2#page13#enu12#ln31" gr:x="20" gr:y="255" fieldOrder="sv2#page13#enu12#fld48 sv2#page13#enu12#fld49 sv2#page13#enu12#fld50" entity="ent2">
+      <Field id="sv2#page13#enu12#fld48" name="Nombre de Proveedor" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
+      <Field id="sv2#page13#enu12#fld49" name="Email de Proveedor" type="string" modifiable="true" attribute="ent2#att15" preloaded="true"/>
+      <Field id="sv2#page13#enu12#fld50" name="Telefono de Proveedor" type="integer" modifiable="true" attribute="ent2#att16" preloaded="true"/>
+      <Field id="sv2#page13#enu12#fld51" name="oIDProveedor" type="string" attribute="ent2#att2" preloaded="true" hidden="true"/>
       <Link id="sv2#page13#enu12#ln31" name="Guardar" to="sv2#inn7" type="normal" validate="true">
         <LinkParameter id="sv2#page13#enu12#ln31#par75" name="oIDComic_Input" source="sv2#page13#enu12#fld51" target="sv2#inn7.isnotnull"/>
         <LinkParameter id="sv2#page13#enu12#ln31#par76" name="EmailProveedor_PASSING" source="sv2#page13#enu12#fld49" passing="true"/>
@@ -43,7 +43,6 @@
               </layout:Unit>
               <layout:Unit unitId="sv2#page13#enu12">
                 <layout:Link link="sv2#page13#enu12#ln31"/>
-                <layout:Field field="sv2#page13#enu12#fld51"/>
                 <layout:Field field="sv2#page13#enu12#fld48"/>
                 <layout:Field field="sv2#page13#enu12#fld49"/>
                 <layout:Field field="sv2#page13#enu12#fld50"/>

@@ -10,7 +10,7 @@
         <KeyCondition id="sv2#page12#dau9#su25#kcond25" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <EntryUnit id="sv2#page12#enu11" name="Formulario Comic" linkOrder="sv2#page12#enu11#ln27" gr:x="140" gr:y="245" fieldOrder="sv2#page12#enu11#fld47 sv2#page12#enu11#fld42 sv2#page12#enu11#fld43 sv2#page12#enu11#fld41 sv2#page12#enu11#fld44 sv2#page12#enu11#fld45 sv2#page12#enu11#fld46 sv2#page12#enu11#msfld1 sv2#page12#enu11#sfld3" entity="ent3">
+    <EntryUnit id="sv2#page12#enu11" name="Formulario Comic" linkOrder="sv2#page12#enu11#ln27" gr:x="140" gr:y="245" fieldOrder="sv2#page12#enu11#fld42 sv2#page12#enu11#fld43 sv2#page12#enu11#fld41 sv2#page12#enu11#fld44 sv2#page12#enu11#fld45 sv2#page12#enu11#fld46 sv2#page12#enu11#msfld1 sv2#page12#enu11#sfld3" entity="ent3">
       <Link id="sv2#page12#enu11#ln27" name="Guardar" to="sv2#inn5" type="normal" validate="true">
         <LinkParameter id="sv2#page12#enu11#ln27#par43" name="oIDComic_Input" source="sv2#page12#enu11#fld47" target="sv2#inn5.isnotnull"/>
         <LinkParameter id="sv2#page12#enu11#ln27#par44" name="Autor_PASSING" source="sv2#page12#enu11#fld46" passing="true"/>
@@ -24,12 +24,12 @@
         <LinkParameter id="sv2#page12#enu11#ln27#par84" name="ComicToCategorias_PASSING" source="sv2#page12#enu11#msfld1" passing="true"/>
       </Link>
       <Field id="sv2#page12#enu11#fld41" name="Precio" type="float" modifiable="true" preloaded="true"/>
-      <Field id="sv2#page12#enu11#fld42" name="TituloComic" type="string" modifiable="true" attribute="ent3#att5" preloaded="true"/>
-      <Field id="sv2#page12#enu11#fld43" name="DescripcionComic" type="string" modifiable="true" attribute="ent3#att10" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld42" name="Titulo" type="string" modifiable="true" attribute="ent3#att5" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld43" name="Descripci&#243;n" type="string" modifiable="true" attribute="ent3#att10" preloaded="true"/>
       <Field id="sv2#page12#enu11#fld44" name="Edad" type="integer" modifiable="true" attribute="ent3#att11" preloaded="true"/>
-      <Field id="sv2#page12#enu11#fld45" name="FechaPublicacion" type="date" modifiable="true" attribute="ent3#att12" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld45" name="Fecha de Publicacion" type="date" modifiable="true" attribute="ent3#att12" preloaded="true"/>
       <Field id="sv2#page12#enu11#fld46" name="Autor" type="string" modifiable="true" attribute="ent3#att13" preloaded="true"/>
-      <Field id="sv2#page12#enu11#fld47" name="oIDComic" type="string" attribute="ent3#att3" preloaded="true"/>
+      <Field id="sv2#page12#enu11#fld47" name="oIDComic" type="string" attribute="ent3#att3" preloaded="true" hidden="true"/>
       <MultiSelectionField id="sv2#page12#enu11#msfld1" name="ComicToCategorias" type="string" role="rel2#role4"/>
       <SelectionField id="sv2#page12#enu11#sfld3" name="Proveedor" type="string" modifiable="true"/>
     </EntryUnit>
@@ -95,7 +95,6 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page12#enu11">
           <layout:Link link="sv2#page12#enu11#ln27"/>
-          <layout:Field field="sv2#page12#enu11#fld47"/>
           <layout:Field field="sv2#page12#enu11#fld42"/>
           <layout:Field field="sv2#page12#enu11#fld43"/>
           <layout:Field field="sv2#page12#enu11#fld41"/>

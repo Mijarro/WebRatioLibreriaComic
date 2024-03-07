@@ -10,16 +10,15 @@
       <Link id="sv2#page11#inu9#ln19" name="Eliminar" to="sv2#dlu7" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page11#inu9#ln20" name="Editar" to="sv2#seu12" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
-    <EntryUnit id="sv2#page11#enu10" name="Nueva Categor&#237;a" linkOrder="sv2#page11#enu10#ln21" gr:x="25" gr:y="230" fieldOrder="sv2#page11#enu10#fld38 sv2#page11#enu10#fld39 sv2#page11#enu10#fld40 sv2#page11#enu10#msfld3" entity="ent4">
-      <Field id="sv2#page11#enu10#fld38" name="oIDCategoria" type="string" preloaded="true"/>
-      <Field id="sv2#page11#enu10#fld39" name="Nombrecategoria" type="string" modifiable="true" attribute="ent4#att8" preloaded="true"/>
-      <Field id="sv2#page11#enu10#fld40" name="DescripcionCategoria" type="string" modifiable="true" attribute="ent4#att14" preloaded="true"/>
+    <EntryUnit id="sv2#page11#enu10" name="Nueva Categor&#237;a" linkOrder="sv2#page11#enu10#ln21" gr:x="25" gr:y="230" fieldOrder="sv2#page11#enu10#fld39 sv2#page11#enu10#fld40" entity="ent4">
+      <Field id="sv2#page11#enu10#fld38" name="oIDCategoria" type="string" preloaded="true" hidden="true"/>
+      <Field id="sv2#page11#enu10#fld39" name="Nombre de Categor&#237;a" type="string" modifiable="true" attribute="ent4#att8" preloaded="true"/>
+      <Field id="sv2#page11#enu10#fld40" name="Descripci&#243;n" type="string" modifiable="true" attribute="ent4#att14" preloaded="true"/>
       <Link id="sv2#page11#enu10#ln21" name="Guardar" to="sv2#inn6" type="normal" validate="true">
         <LinkParameter id="sv2#page11#enu10#ln21#par6" name="oIDComic_Input" source="sv2#page11#enu10#fld38" target="sv2#inn6.isnotnull"/>
         <LinkParameter id="sv2#page11#enu10#ln21#par7" name="DescripcionCategoria_PASSING" source="sv2#page11#enu10#fld40" passing="true"/>
         <LinkParameter id="sv2#page11#enu10#ln21#par8" name="Nombrecategoria_PASSING" source="sv2#page11#enu10#fld39" passing="true"/>
       </Link>
-      <MultiSelectionField id="sv2#page11#enu10#msfld3" name="CategoriasToComic" type="string" role="rel2#role3"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -40,10 +39,8 @@
               </layout:Unit>
               <layout:Unit unitId="sv2#page11#enu10">
                 <layout:Link link="sv2#page11#enu10#ln21"/>
-                <layout:Field field="sv2#page11#enu10#fld38"/>
                 <layout:Field field="sv2#page11#enu10#fld39"/>
                 <layout:Field field="sv2#page11#enu10#fld40"/>
-                <layout:Field field="sv2#page11#enu10#msfld3"/>
               </layout:Unit>
             </layout:Cell>
           </layout:Row>
