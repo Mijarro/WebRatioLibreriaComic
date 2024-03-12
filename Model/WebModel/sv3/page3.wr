@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page3" name="Categorias" landmark="true" gr:x="839" gr:y="648">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page3" name="Categorias" landmark="true" gr:x="1515" gr:y="75">
   <ContentUnits>
     <DataUnit id="sv3#page3#dau1" name="Categoria Seleccionada" gr:x="0" gr:y="0" entity="ent4" displayAll="true">
       <Selector id="sv3#page3#dau1#su3" defaultPolicy="fill" booleanOperator="and">
