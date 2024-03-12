@@ -86,4 +86,12 @@
       <db:JoinColumn attribute="ent2#att2" name="proveedor_oid"/>
     </RelationshipRole2>
   </Relationship>
+  <Entity gr:x="925" gr:y="470" id="ent1" name="CarroCompra" duration="volatile" attributeOrder="ent1#att17 ent1#att18 ent1#att19 ent1#att20 ent1#att21 ent1#att22" volatileStorage="database">
+    <Attribute id="ent1#att17" key="true" name="oid" type="integer"/>
+    <Attribute id="ent1#att18" name="NombreComic_c" type="string"/>
+    <Attribute id="ent1#att19" name="oIDComic_c" type="string"/>
+    <Attribute id="ent1#att20" name="PrecioComic_c" type="float"/>
+    <Attribute id="ent1#att21" name="Cantidad_c" type="integer"/>
+    <Attribute id="ent1#att22" name="PrecioTotal" type="float"/>
+  </Entity>
 </DataModel>
