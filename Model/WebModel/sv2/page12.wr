@@ -45,6 +45,13 @@
         <LinkParameter id="sv2#page12#seu17#ln45#par133" name="oid_Proveedor [output]" source="ent2#att2Array" target="sv2#page12#enu11#sfld3_output"/>
       </Link>
     </SelectorUnit>
+    <EntryUnit gr:x="160" gr:y="450" id="sv2#page12#enu8" name="Cargar c&#243;mics" fieldOrder="sv2#page12#enu8#fld12" linkOrder="sv2#page12#enu8#ln60">
+      <Field id="sv2#page12#enu8#fld12" name="Elige archivo Excel .xls" type="blob" modifiable="true"/>
+      <Link id="sv2#page12#enu8#ln60" name="Cargar" to="sv2#exu3" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#enu8#ln60#par299" name="Elige archivo Excel .xls_BLOB" source="sv2#page12#enu8#fld12" target="sv2#exu3.blob"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="5" gr:y="445" id="sv2#page12#mssu5" name="Message5"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -132,7 +139,12 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#enu8">
+          <layout:Field field="sv2#page12#enu8#fld12"/>
+          <layout:Link link="sv2#page12#enu8#ln60"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -146,7 +158,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#mssu5"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,24 +1,23 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="645" gr:y="320" id="sv1#page5" name="Pagina Inicio">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="495" gr:y="320" id="sv1#page5" name="Pagina Inicio">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#page5#enu4" name="Inicio Sesion" entity="User" linkOrder="sv1#page5#enu4#ln5">
-      <Field id="sv1#page5#enu4#fld1" name="userName" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv1#page5#enu4#fld12" name="password" type="password" modifiable="true" attribute="password"/>
-      <Link id="sv1#page5#enu4#ln5" name="Acceder" to="sv1#lgu1" type="normal" validate="true">
-        <LinkParameter id="sv1#page5#enu4#ln5#par1" name="userName_Username" source="sv1#page5#enu4#fld1" target="sv1#lgu1.username"/>
-        <LinkParameter id="sv1#page5#enu4#ln5#par2" name="password_Password" source="sv1#page5#enu4#fld12" target="sv1#lgu1.password"/>
+    <MultiMessageUnit gr:x="145" gr:y="10" id="sv1#page5#mssu1" name="Mensaje">
+      <Link id="sv1#page5#mssu1#ln50" name="Flow43" to="sv1#page5#enu7" type="transport" validate="true">
+        <LinkParameter id="sv1#page5#mssu1#ln50#par167" name="password_PASSING_password" sourceLinkParameter="sv1#miu1#oln16#par131" target="sv1#page5#enu7#fld11_slot"/>
+        <LinkParameter id="sv1#page5#mssu1#ln50#par168" name="userName_PASSING_userName" sourceLinkParameter="sv1#miu1#oln16#par135" target="sv1#page5#enu7#fld10_slot"/>
+      </Link>
+    </MultiMessageUnit>
+    <EntryUnit id="sv1#page5#enu7" name="Inicio Sesion" linkOrder="sv1#page5#enu7#ln47" gr:x="0" gr:y="0" entity="User" fieldOrder="sv1#page5#enu7#fld10 sv1#page5#enu7#fld11">
+      <Field id="sv1#page5#enu7#fld10" name="Usuario" type="string" modifiable="true" attribute="userName" preloaded="true"/>
+      <Field id="sv1#page5#enu7#fld11" name="Contrase&#241;a" type="password" modifiable="true" attribute="password" preloaded="true"/>
+      <Link id="sv1#page5#enu7#ln47" name="Acceder" to="sv1#lgu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page5#enu7#ln47#par164" name="userName_Username" source="sv1#page5#enu7#fld10" target="sv1#lgu1.username"/>
+        <LinkParameter id="sv1#page5#enu7#ln47#par165" name="password_Password" source="sv1#page5#enu7#fld11" target="sv1#lgu1.password"/>
       </Link>
     </EntryUnit>
-    <MultiMessageUnit gr:x="145" gr:y="10" id="sv1#page5#mssu1" name="mensajeErrorLogin"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page5#enu4">
-          <layout:Field field="sv1#page5#enu4#fld1"/>
-          <layout:Field field="sv1#page5#enu4#fld12"/>
-          <layout:Link link="sv1#page5#enu4#ln5"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -47,5 +46,40 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page5#enu7">
+          <layout:Field field="sv1#page5#enu7#fld10"/>
+          <layout:Field field="sv1#page5#enu7#fld11"/>
+          <layout:Link link="sv1#page5#enu7#ln47"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
+  <Link id="sv1#page5#ln52" name="Registrarse" to="sv1#page9" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

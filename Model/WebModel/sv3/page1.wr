@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1225" gr:y="35" id="sv3#page1" name="Calendario" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1020" gr:y="20" id="sv3#page1" name="Calendario" landmark="true">
   <ContentUnits>
-    <EventCalendarUnit gr:x="5" gr:y="0" id="sv3#page1#ecu1" name="Calendario" linkOrder="sv3#page1#ecu1#ln1">
+    <EventCalendarUnit gr:x="0" gr:y="0" id="sv3#page1#ecu1" name="Calendario" linkOrder="sv3#page1#ecu1#ln1">
       <Link id="sv3#page1#ecu1#ln1" name="Flow1" to="sv3#page1#mssu2" type="normal" validate="true">
         <LinkParameter id="sv3#page1#ecu1#ln1#par84" name="Selected Date_Shown Messages" source="date[].date" target="sv3#page1#mssu2.shownMessages"/>
       </Link>

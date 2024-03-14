@@ -1,0 +1,42 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="255" gr:y="180" id="mov2#opm1" name="Crear Usuario">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm1#icu1" gr:x="30" gr:y="60">
+      <OKLink id="mov2#opm1#icu1#oln3" name="OKFlow3" to="mov2#opm1#tmu2">
+        <LinkParameter id="mov2#opm1#icu1#oln3#par145" name="email_PASSING" source="mov2#opm1#icu1#icp3" passing="true"/>
+        <LinkParameter id="mov2#opm1#icu1#oln3#par146" name="group_PASSING" source="mov2#opm1#icu1#icp6" passing="true"/>
+        <LinkParameter id="mov2#opm1#icu1#oln3#par147" name="password_PASSING" source="mov2#opm1#icu1#icp2" passing="true"/>
+        <LinkParameter id="mov2#opm1#icu1#oln3#par149" name="userName_PASSING" source="mov2#opm1#icu1#icp1" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#opm1#icu1#icp1" name="userName"/>
+      <InputCollectorParameter id="mov2#opm1#icu1#icp2" name="password"/>
+      <InputCollectorParameter id="mov2#opm1#icu1#icp3" name="email"/>
+      <InputCollectorParameter id="mov2#opm1#icu1#icp6" name="group"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="345" gr:y="100" id="mov2#opm1#cru7" name="Create7" entity="User">
+      <OKLink id="mov2#opm1#cru7#oln11" name="OKFlow11" to="mov2#opm1#okcu1">
+        <LinkParameter id="mov2#opm1#cru7#oln11#par115" name="Usuario creado exit&#243;samente._Mensaje Exito" sourceValue="Usuario creado satisfactoriamente." target="mov2#opm1#okcu1#ocp2"/>
+      </OKLink>
+      <KOLink id="mov2#opm1#cru7#kln1" name="KOFlow1" to="mov2#opm1#kocu1">
+        <LinkParameter id="mov2#opm1#cru7#kln1#par114" name="Fallo al crear el usuario_Mensaje Error" sourceValue="Fallo al crear el usuario" target="mov2#opm1#kocu1#ocp1"/>
+      </KOLink>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="520" gr:y="60" id="mov2#opm1#okcu1" name="Exito">
+      <OutputCollectorParameter id="mov2#opm1#okcu1#ocp2" name="Mensaje Exito"/>
+      <OutputCollectorParameter id="mov2#opm1#okcu1#ocp3" name="userName"/>
+      <OutputCollectorParameter id="mov2#opm1#okcu1#ocp4" name="password"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="520" gr:y="175" id="mov2#opm1#kocu1" name="Fallo">
+      <OutputCollectorParameter id="mov2#opm1#kocu1#ocp1" name="Mensaje Error"/>
+    </KOCollectorUnit>
+    <TimeUnit gr:x="345" gr:y="225" id="mov2#opm1#tmu2" name="Time2">
+      <OKLink id="mov2#opm1#tmu2#oln18" name="OKFlow18" to="mov2#opm1#cru7">
+        <LinkParameter id="mov2#opm1#tmu2#oln18#par150" name="email_PASSING_email" sourceLinkParameter="mov2#opm1#icu1#oln3#par145" target="mov2#opm1#cru7.email"/>
+        <LinkParameter id="mov2#opm1#tmu2#oln18#par156" name="Current/Input Timestamp_fecha_alta" source="currentTimestamp" target="mov2#opm1#cru7.User#att7"/>
+        <LinkParameter id="mov2#opm1#tmu2#oln18#par157" name="group_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="mov2#opm1#icu1#oln3#par146" target="mov2#opm1#cru7.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#opm1#tmu2#oln18#par158" name="group_PASSING_Group.oid(groups)" sourceLinkParameter="mov2#opm1#icu1#oln3#par146" target="mov2#opm1#cru7.User2Group.groupOID"/>
+        <LinkParameter id="mov2#opm1#tmu2#oln18#par159" name="password_PASSING_password" sourceLinkParameter="mov2#opm1#icu1#oln3#par147" target="mov2#opm1#cru7.password"/>
+        <LinkParameter id="mov2#opm1#tmu2#oln18#par160" name="userName_PASSING_userName" sourceLinkParameter="mov2#opm1#icu1#oln3#par149" target="mov2#opm1#cru7.userName"/>
+      </OKLink>
+    </TimeUnit>
+  </OperationUnits>
+</OperationModule>

@@ -43,7 +43,7 @@
       </Selector>
       <OKLink id="sv2#dlu4#oln20" name="OKFlow20" to="sv2#page6" automaticCoupling="true"/>
     </DeleteUnit>
-    <IsNotNullUnit id="sv2#inn5" name="Is Not Null1" gr:x="335" gr:y="605" emptyStringAsNull="true">
+    <IsNotNullUnit id="sv2#inn5" name="Is Not Null1" gr:x="585" gr:y="460" emptyStringAsNull="true">
       <KOLink id="sv2#inn5#kln6" name="KOFlow1" to="sv2#cru3">
         <LinkParameter id="sv2#inn5#kln6#par9" name="Autor_PASSING_Autor" sourceLinkParameter="sv2#page12#enu11#ln27#par44" target="sv2#cru3.ent3#att13"/>
         <LinkParameter id="sv2#inn5#kln6#par10" name="DescripcionComic_PASSING_DescripcionComic" sourceLinkParameter="sv2#page12#enu11#ln27#par45" target="sv2#cru3.ent3#att10"/>
@@ -65,7 +65,7 @@
         <LinkParameter id="sv2#inn5#oln21#par85" name="ComicToCategorias_PASSING_Categorias.oid(ComicToCategorias)" sourceLinkParameter="sv2#page12#enu11#ln27#par84" target="sv2#mfu6.rel2#role4.ent4#att6"/>
       </OKLink>
     </IsNotNullUnit>
-    <CreateUnit id="sv2#cru3" name="NuevoComic" gr:x="155" gr:y="590" entity="ent3">
+    <CreateUnit id="sv2#cru3" name="NuevoComic" gr:x="595" gr:y="555" entity="ent3">
       <OKLink id="sv2#cru3#oln22" name="OKFlow1" to="sv2#page12" automaticCoupling="true"/>
     </CreateUnit>
     <DeleteUnit id="sv2#dlu5" name="Eliminar Proveedor" gr:x="695" gr:y="210" entity="ent2">
@@ -96,7 +96,7 @@
         <LinkParameter id="sv2#seu10#oln25#par87" name="ComicToProveedor.oid_Proveedor - Preselection" source="rel4#role7_ent2#att2Array" target="sv2#page12#enu11#sfld3_presel"/>
       </OKLink>
     </SelectorUnit>
-    <ModifyUnit id="sv2#mfu6" name="Update2" gr:x="475" gr:y="575" entity="ent3">
+    <ModifyUnit id="sv2#mfu6" name="Update2" gr:x="595" gr:y="335" entity="ent3">
       <Selector id="sv2#mfu6#su29" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu6#su29#kcond29" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
@@ -183,5 +183,42 @@
         <LinkParameter id="sv2#tmu1#oln5#par99" name="Current/Input Timestamp_fecha_alta" source="currentTimestamp" target="sv2#cru1.User#att7"/>
       </OKLink>
     </TimeUnit>
+    <LoopUnit gr:x="245" gr:y="645" id="sv2#lpu1" name="Loop1">
+      <SecondaryArray id="sv2#lpu1#lsa2" name="Precio"/>
+      <SecondaryArray id="sv2#lpu1#lsa3" name="Descripcion"/>
+      <SecondaryArray id="sv2#lpu1#lsa4" name="Edad"/>
+      <SecondaryArray id="sv2#lpu1#lsa5" name="FechaPublicaion"/>
+      <SecondaryArray id="sv2#lpu1#lsa6" name="Autor"/>
+      <OKLink id="sv2#lpu1#oln67" name="OKFlow67" to="sv2#cru10">
+        <LinkParameter id="sv2#lpu1#oln67#par307" name="Next Element (Autor)_Autor" source="sv2#lpu1#lsa6" target="sv2#cru10.ent3#att13"/>
+        <LinkParameter id="sv2#lpu1#oln67#par308" name="Next Element (Descripcion)_DescripcionComic" source="sv2#lpu1#lsa3" target="sv2#cru10.ent3#att10"/>
+        <LinkParameter id="sv2#lpu1#oln67#par309" name="Next Element (Edad)_Edad" source="sv2#lpu1#lsa4" target="sv2#cru10.ent3#att11"/>
+        <LinkParameter id="sv2#lpu1#oln67#par310" name="Next Element (FechaPublicaion)_FechaPublicacion" source="sv2#lpu1#lsa5" target="sv2#cru10.ent3#att12"/>
+        <LinkParameter id="sv2#lpu1#oln67#par311" name="Next Element (Precio)_Precio" source="sv2#lpu1#lsa2" target="sv2#cru10.ent3#att9"/>
+        <LinkParameter id="sv2#lpu1#oln67#par312" name="Next Element_TituloComic" source="next" target="sv2#cru10.ent3#att5"/>
+      </OKLink>
+      <OKLink id="sv2#lpu1#oln69" name="OKFlow69" to="sv2#page12#mssu5">
+        <LinkParameter id="sv2#lpu1#oln69#par313" name="Comic Cargado satisfactoriamente._Shown Messages" sourceValue="Comic Cargado satisfactoriamente." target="sv2#page12#mssu5.shownMessages"/>
+      </OKLink>
+    </LoopUnit>
+    <ExcelUnit id="sv2#exu3" name="Leer Excel" gr:x="405" gr:y="645" mode="read" format="xls" sourceType="blob">
+      <CellInfo id="sv2#exu3#ci2" name="TituloComic" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="A" rows="2:"/>
+      <CellInfo id="sv2#exu3#ci3" name="Precio" type="float" preserveCellStyle="false" autoSizeColumn="true" column="B" rows="2:" sheet="1"/>
+      <CellInfo id="sv2#exu3#ci4" name="DescripcionComic" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="C" rows="2:"/>
+      <CellInfo id="sv2#exu3#ci5" name="Edad" type="integer" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="D" rows="2:"/>
+      <CellInfo id="sv2#exu3#ci6" name="FechaPublicacion" type="date" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="E" rows="2:"/>
+      <CellInfo id="sv2#exu3#ci7" name="Autor" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="F" rows="2:"/>
+      <OKLink id="sv2#exu3#oln66" name="OKFlow66" to="sv2#lpu1">
+        <LinkParameter id="sv2#exu3#oln66#par300" name="Autor_Autor" source="sv2#exu3#ci7Array" target="sv2#lpu1#lsa6"/>
+        <LinkParameter id="sv2#exu3#oln66#par301" name="DescripcionComic_Descripcion" source="sv2#exu3#ci4Array" target="sv2#lpu1#lsa3"/>
+        <LinkParameter id="sv2#exu3#oln66#par302" name="Edad_Edad" source="sv2#exu3#ci5Array" target="sv2#lpu1#lsa4"/>
+        <LinkParameter id="sv2#exu3#oln66#par303" name="FechaPublicacion_FechaPublicaion" source="sv2#exu3#ci6Array" target="sv2#lpu1#lsa5"/>
+        <LinkParameter id="sv2#exu3#oln66#par304" name="TituloComic_Input Array" source="sv2#exu3#ci2Array" target="sv2#lpu1.array"/>
+        <LinkParameter id="sv2#exu3#oln66#par305" name="Precio_Precio" source="sv2#exu3#ci3Array" target="sv2#lpu1#lsa2"/>
+      </OKLink>
+    </ExcelUnit>
+    <CreateUnit gr:x="405" gr:y="745" id="sv2#cru10" name="GuardarComic" entity="ent3">
+      <OKLink id="sv2#cru10#oln68" name="OKFlow68" to="sv2#lpu1" automaticCoupling="true" gr:bendpoints="-124,-29,50,81"/>
+    </CreateUnit>
   </OperationUnits>
 </SiteView>
