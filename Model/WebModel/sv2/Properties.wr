@@ -189,7 +189,7 @@
       <SecondaryArray id="sv2#lpu1#lsa4" name="Edad"/>
       <SecondaryArray id="sv2#lpu1#lsa5" name="FechaPublicaion"/>
       <SecondaryArray id="sv2#lpu1#lsa6" name="Autor"/>
-      <OKLink id="sv2#lpu1#oln67" name="OKFlow67" to="sv2#cru10">
+      <OKLink id="sv2#lpu1#oln67" name="OKFlow67" to="sv2#cru10" customDescriptor="false" code="next">
         <LinkParameter id="sv2#lpu1#oln67#par307" name="Next Element (Autor)_Autor" source="sv2#lpu1#lsa6" target="sv2#cru10.ent3#att13"/>
         <LinkParameter id="sv2#lpu1#oln67#par308" name="Next Element (Descripcion)_DescripcionComic" source="sv2#lpu1#lsa3" target="sv2#cru10.ent3#att10"/>
         <LinkParameter id="sv2#lpu1#oln67#par309" name="Next Element (Edad)_Edad" source="sv2#lpu1#lsa4" target="sv2#cru10.ent3#att11"/>
@@ -197,7 +197,7 @@
         <LinkParameter id="sv2#lpu1#oln67#par311" name="Next Element (Precio)_Precio" source="sv2#lpu1#lsa2" target="sv2#cru10.ent3#att9"/>
         <LinkParameter id="sv2#lpu1#oln67#par312" name="Next Element_TituloComic" source="next" target="sv2#cru10.ent3#att5"/>
       </OKLink>
-      <OKLink id="sv2#lpu1#oln69" name="OKFlow69" to="sv2#page12#mssu5">
+      <OKLink id="sv2#lpu1#oln69" name="OKFlow69" to="sv2#page12#mssu5" code="end">
         <LinkParameter id="sv2#lpu1#oln69#par313" name="Comic Cargado satisfactoriamente._Shown Messages" sourceValue="Comic Cargado satisfactoriamente." target="sv2#page12#mssu5.shownMessages"/>
       </OKLink>
     </LoopUnit>
