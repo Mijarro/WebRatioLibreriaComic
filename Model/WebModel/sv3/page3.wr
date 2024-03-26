@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page3" name="Categorias" landmark="true" gr:x="1515" gr:y="75">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page3" name="Categorias" landmark="true" gr:x="195" gr:y="950">
   <ContentUnits>
     <DataUnit id="sv3#page3#dau1" name="Categoria Seleccionada" gr:x="0" gr:y="0" entity="ent4" displayAll="true">
       <Selector id="sv3#page3#dau1#su3" defaultPolicy="fill" booleanOperator="and">
@@ -9,37 +9,30 @@
       <Link id="sv3#page3#inu4#ln3" name="Seleccionar" to="sv3#page3#dau1" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv3#page3#inu4#ln4" name="Buscar C&#243;mics" to="sv3#seu3" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
-    <MultiDataUnit id="sv3#page3#mdu2" name="MultipleDetails1" gr:x="20" gr:y="230" entity="ent3" displayAttributes="ent3#att5 ent3#att13 ent3#att12 ent3#att11 ent3#att10 ent3#att9">
-      <Selector id="sv3#page3#mdu2#su4" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv3#page3#mdu2#su4#rcond2" name="RoleCondition1" predicate="in" implied="false" role="rel2#role3"/>
-      </Selector>
-    </MultiDataUnit>
+    <IndexUnit gr:x="40" gr:y="235" id="sv3#page3#inu7" name="Comics" entity="ent3" linkOrder="sv3#page3#inu7#ln37" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
+      <Link id="sv3#page3#inu7#ln37" name="A&#241;adir al carrito" to="sv3#miu2" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Grid containerType="cell">
-          <layout:Row>
-            <layout:Cell>
-              <layout:Unit unitId="sv3#page3#dau1">
-                <layout:Attribute attribute="ent4#att8"/>
-                <layout:Attribute attribute="ent4#att14"/>
-              </layout:Unit>
-              <layout:Unit unitId="sv3#page3#inu4">
-                <layout:Attribute attribute="ent4#att8"/>
-                <layout:Link link="sv3#page3#inu4#ln3"/>
-                <layout:Link link="sv3#page3#inu4#ln4"/>
-              </layout:Unit>
-            </layout:Cell>
-          </layout:Row>
-        </layout:Grid>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page3#inu4">
+          <layout:Attribute attribute="ent4#att8"/>
+          <layout:Link link="sv3#page3#inu4#ln3"/>
+          <layout:Link link="sv3#page3#inu4#ln4"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page3#dau1">
+          <layout:Attribute attribute="ent4#att8"/>
+          <layout:Attribute attribute="ent4#att14"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -48,13 +41,14 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page3#mdu2">
+        <layout:Unit unitId="sv3#page3#inu7">
+          <layout:Link link="sv3#page3#inu7#ln37"/>
           <layout:Attribute attribute="ent3#att5"/>
-          <layout:Attribute attribute="ent3#att13"/>
-          <layout:Attribute attribute="ent3#att12"/>
-          <layout:Attribute attribute="ent3#att11"/>
-          <layout:Attribute attribute="ent3#att10"/>
           <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att13"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

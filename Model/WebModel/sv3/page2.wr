@@ -1,24 +1,40 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="895" gr:y="605" id="sv3#page2" name="Buscador de Comics" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="725" gr:y="690" id="sv3#page2" name="Comics" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv3#page2#enu1" name="Buscar Comic" linkOrder="sv3#page2#enu1#ln2" fieldOrder="sv3#page2#enu1#fld2 sv3#page2#enu1#fld3">
+    <EntryUnit gr:x="0" gr:y="180" id="sv3#page2#enu1" name="Buscar Comic" fieldOrder="sv3#page2#enu1#fld2 sv3#page2#enu1#fld3" linkOrder="sv3#page2#enu1#ln76">
       <Field id="sv3#page2#enu1#fld2" name="Texto para buscar Titulo" type="string" modifiable="true"/>
-      <Link id="sv3#page2#enu1#ln2" name="Buscar" to="sv3#seu2" type="normal" validate="true">
-        <LinkParameter id="sv3#page2#enu1#ln2#par85" name="Texto para buscar_que tenga" source="sv3#page2#enu1#fld2" target="sv3#seu2#su2#acond1"/>
-        <LinkParameter id="sv3#page2#enu1#ln2#par86" name="Texto para buscar Autor_que tenga autor" source="sv3#page2#enu1#fld3" target="sv3#seu2#su2#acond2"/>
-      </Link>
       <Field id="sv3#page2#enu1#fld3" name="Texto para buscar Autor" type="string" modifiable="true"/>
+      <Link id="sv3#page2#enu1#ln76" name="Buscar" to="sv3#page2#seu5" type="normal" validate="true">
+        <LinkParameter id="sv3#page2#enu1#ln76#par222" name="Texto para buscar_que tenga" source="sv3#page2#enu1#fld2" target="sv3#page2#seu5#su12#acond3"/>
+        <LinkParameter id="sv3#page2#enu1#ln76#par223" name="Texto para buscar Autor_que tenga autor" source="sv3#page2#enu1#fld3" target="sv3#page2#seu5#su12#acond4"/>
+      </Link>
     </EntryUnit>
-    <IndexUnit gr:x="195" gr:y="5" id="sv3#page2#inu1" name="Listado Comics" entity="ent3" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13" linkOrder="sv3#page2#inu1#ln9">
+    <IndexUnit gr:x="195" gr:y="185" id="sv3#page2#inu1" name="Listado Comics" entity="ent3" displayAttributes="ent3#att5 ent3#att9" linkOrder="sv3#page2#inu1#ln9">
       <Selector id="sv3#page2#inu1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page2#inu1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#page2#inu1#ln9" name="Flow9" to="sv3#page2#dau2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#page2#inu1#ln9" name="Seleccionar" to="sv3#page2#dau2" automaticCoupling="true" type="automatic" validate="true"/>
     </IndexUnit>
-    <DataUnit gr:x="180" gr:y="135" id="sv3#page2#dau2" name="Comic Seleccionado" entity="ent3" displayAll="true">
+    <DataUnit gr:x="180" gr:y="315" id="sv3#page2#dau2" name="Comic Seleccionado" entity="ent3" displayAll="true" linkOrder="sv3#page2#dau2#ln5">
       <Selector id="sv3#page2#dau2#su6" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page2#dau2#su6#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#page2#dau2#ln5" name="A&#241;adir al carrito" to="sv3#miu2" type="normal" validate="true">
+        <LinkParameter id="sv3#page2#dau2#ln5#par2" name="oid_oIDComic_c" source="data.ent3#att3" target="sv3#miu2.mov2#opm2#icu2#icp9"/>
+      </Link>
     </DataUnit>
+    <MultiMessageUnit id="sv3#page2#mssu6" name="Resultado" gr:x="180" gr:y="550"/>
+    <EventCalendarUnit id="sv3#page2#ecu2" name="Calendario" linkOrder="sv3#page2#ecu2#ln38" gr:x="180" gr:y="440">
+      <Link id="sv3#page2#ecu2#ln38" name="Flow1" to="sv3#page2#mssu6" type="normal" validate="true">
+        <LinkParameter id="sv3#page2#ecu2#ln38#par5" name="Selected Date_Shown Messages" source="date[].date" target="sv3#page2#mssu6.shownMessages"/>
+      </Link>
+    </EventCalendarUnit>
+    <SelectorUnit id="sv3#page2#seu5" name="Selector2" gr:x="35" gr:y="0" entity="ent3">
+      <Selector id="sv3#page2#seu5#su12" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page2#seu5#su12#acond3" name="que tenga titulo" predicate="contains" booleanOperator="and" implied="true" attributes="ent3#att5" ignoreCase="true"/>
+        <AttributesCondition id="sv3#page2#seu5#su12#acond4" name="que tenga autor" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent3#att13"/>
+      </Selector>
+      <Link id="sv3#page2#seu5#ln77" name="Flow77" to="sv3#page2#inu1" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -26,7 +42,7 @@
         <layout:Unit unitId="sv3#page2#enu1">
           <layout:Field field="sv3#page2#enu1#fld2"/>
           <layout:Field field="sv3#page2#enu1#fld3"/>
-          <layout:Link link="sv3#page2#enu1#ln2"/>
+          <layout:Link link="sv3#page2#enu1#ln76"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -42,15 +58,11 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv3#page2#inu1">
+          <layout:Link link="sv3#page2#inu1#ln9"/>
           <layout:Attribute attribute="ent3#att5"/>
           <layout:Attribute attribute="ent3#att9"/>
-          <layout:Attribute attribute="ent3#att10"/>
-          <layout:Attribute attribute="ent3#att11"/>
-          <layout:Attribute attribute="ent3#att12"/>
-          <layout:Attribute attribute="ent3#att13"/>
-          <layout:Link link="sv3#page2#inu1#ln9"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -58,15 +70,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv3#page2#dau2">
           <layout:Attribute attribute="ent3#att5"/>
           <layout:Attribute attribute="ent3#att9"/>
@@ -74,8 +78,64 @@
           <layout:Attribute attribute="ent3#att11"/>
           <layout:Attribute attribute="ent3#att12"/>
           <layout:Attribute attribute="ent3#att13"/>
+          <layout:Link link="sv3#page2#dau2#ln5"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page2#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page2#ecu2">
+          <layout:Link link="sv3#page2#ecu2#ln38"/>
+          <layout:Link link="sv3#page2#ecu2-month-0"/>
+          <layout:Link link="sv3#page2#ecu2-month-1"/>
+          <layout:Link link="sv3#page2#ecu2-month-2"/>
+          <layout:Link link="sv3#page2#ecu2-month-3"/>
+          <layout:Link link="sv3#page2#ecu2-month-4"/>
+          <layout:Link link="sv3#page2#ecu2-month-5"/>
+          <layout:Link link="sv3#page2#ecu2-month-6"/>
+          <layout:Link link="sv3#page2#ecu2-month-7"/>
+          <layout:Link link="sv3#page2#ecu2-month-8"/>
+          <layout:Link link="sv3#page2#ecu2-month-9"/>
+          <layout:Link link="sv3#page2#ecu2-month-10"/>
+          <layout:Link link="sv3#page2#ecu2-month-11"/>
+          <layout:Link link="sv3#page2#ecu2-year"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

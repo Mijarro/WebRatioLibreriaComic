@@ -82,7 +82,7 @@
         <LinkParameter id="mov2#opm2#inn9#kln21#par289" name="oIDCarro_PASSING_KeyCondition6 [oid]" sourceLinkParameter="mov2#opm2#seu19#oln52#par285" target="mov2#opm2#dlu2#su39#kcond22.ent1#att17"/>
       </KOLink>
     </IsNotNullUnit>
-    <SelectorUnit id="mov2#opm2#seu20" name="Selector5" gr:x="435" gr:y="85" entity="ent3">
+    <SelectorUnit id="mov2#opm2#seu20" name="Selector5" gr:x="410" gr:y="75" entity="ent3">
       <Selector id="mov2#opm2#seu20#su37" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#opm2#seu20#su37#kcond20" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
@@ -122,7 +122,7 @@
         <LinkParameter id="mov2#opm2#mathu11#oln56#par265" name="PrecioComic_c_PASSING_PrecioComic_c" sourceLinkParameter="mov2#opm2#inn9#oln53#par253" target="mov2#opm2#mfu3.ent1#att20"/>
       </OKLink>
     </MathUnit>
-    <IsNotNullUnit id="mov2#opm2#inn10" name="Is Not Null1" gr:x="515" gr:y="300" emptyStringAsNull="true">
+    <IsNotNullUnit id="mov2#opm2#inn10" name="Is Not Null1" gr:x="590" gr:y="295" emptyStringAsNull="true">
       <OKLink id="mov2#opm2#inn10#oln57" name="OKFlow12" to="mov2#opm2#mathu12">
         <LinkParameter id="mov2#opm2#inn10#oln57#par266" name="Cantidad_c_PASSING_Sumar" sourceLinkParameter="mov2#opm2#seu18#oln50#par225" target="mov2#opm2#mathu12#mathv18"/>
       </OKLink>

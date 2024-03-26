@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Inicio" landmarks="sv3#lou2 sv3#page7 sv3#page1 sv3#page2 sv3#page3" homePage="sv3#page4">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Inicio" landmarks="sv3#page2 sv3#page3 sv3#page4 sv3#page7 sv3#lou2" homePage="sv3#page2" protected="true">
   <OperationUnits>
     <LogoutUnit gr:x="585" gr:y="190" id="sv3#lou2" name="Logout" landmark="true" siteView="sv1"/>
     <DeleteUnit gr:x="445" gr:y="180" id="sv3#dlu4" name="Delete4" entity="User">
@@ -15,27 +15,22 @@
       <OKLink id="sv3#mfu4#oln9" name="OKFlow9" to="sv3#page7" automaticCoupling="true"/>
       <KOLink id="sv3#mfu4#kln10" name="KOFlow10" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit gr:x="970" gr:y="455" id="sv3#seu2" name="Selector2" entity="ent3">
-      <Selector id="sv3#seu2#su2" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#seu2#su2#acond1" name="que tenga titulo" predicate="contains" booleanOperator="and" implied="true" attributes="ent3#att5" ignoreCase="true"/>
-        <AttributesCondition id="sv3#seu2#su2#acond2" name="que tenga autor" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent3#att13"/>
-      </Selector>
-      <OKLink id="sv3#seu2#oln2" name="OKFlow2" to="sv3#page2#inu1" automaticCoupling="true"/>
-    </SelectorUnit>
-    <SelectorUnit id="sv3#seu3" name="SelectorComic" gr:x="1825" gr:y="230" entity="ent4">
+    <SelectorUnit id="sv3#seu3" name="SelectorComic" gr:x="505" gr:y="1105" entity="ent4" linkOrder="sv3#seu3#ln36">
       <Selector id="sv3#seu3#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#seu3#su5#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#seu3#ln6" name="Flow43" to="sv3#page3#mdu2" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#seu3#ln36" name="Flow36" to="sv3#page3#inu7" type="transport" validate="true">
+        <LinkParameter id="sv3#seu3#ln36#par4" name="oid_current oid" source="ent4#att6Array" target="sv3#page3#inu7.current.ent3#att3"/>
+      </Link>
     </SelectorUnit>
-    <DeleteUnit gr:x="520" gr:y="535" id="sv3#dlu1" name="CarBajaCarroCompra" entity="ent1">
+    <DeleteUnit gr:x="735" gr:y="550" id="sv3#dlu1" name="CarBajaCarroCompra" entity="ent1">
       <Selector id="sv3#dlu1#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu1#su8#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#dlu1#oln8" name="OKFlow8" to="sv3#page4#inu6" automaticCoupling="true" gr:bendpoints="-108,15,97,15"/>
       <KOLink id="sv3#dlu1#kln11" name="KOFlow11" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </DeleteUnit>
-    <ModuleInstanceUnit gr:x="355" gr:y="800" id="sv3#miu2" action="true" moduleId="mov2#opm2">
+    <ModuleInstanceUnit gr:x="350" gr:y="830" id="sv3#miu2" action="true" moduleId="mov2#opm2">
       <OKLink id="sv3#miu2#oln62" name="OKFlow62" to="sv3#page4#inu6" automaticCoupling="true"/>
       <KOLink id="sv3#miu2#kln25" name="KOFlow25" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </ModuleInstanceUnit>

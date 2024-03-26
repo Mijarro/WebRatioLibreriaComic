@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="135" gr:y="885" id="sv2#page8" name="Rol" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="70" gr:y="790" id="sv2#page8" name="Rol" landmark="true">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv2#page8#inu2" name="Simple List2" entity="Group" displayAttributes="groupOID groupName"/>
   </ContentUnits>
