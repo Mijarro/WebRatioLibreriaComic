@@ -46,6 +46,7 @@
         <LinkParameter id="sv2#page6#seu4#ln8#par90" name="oid_defaultGroup [output]" source="groupOIDArray" target="sv2#page6#enu2#sfld2_output"/>
       </Link>
     </SelectorUnit>
+    <IndexUnit id="sv2#page6#inu9" name="Lista de Roles" gr:x="330" gr:y="390" entity="Group" displayAttributes="groupOID groupName"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -78,7 +79,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page6#enu5">
           <layout:Link link="sv2#page6#enu5#ln11"/>
           <layout:Field field="sv2#page6#enu5#fld13"/>
@@ -92,7 +93,12 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page6#inu9">
+          <layout:Attribute attribute="groupOID"/>
+          <layout:Attribute attribute="groupName"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

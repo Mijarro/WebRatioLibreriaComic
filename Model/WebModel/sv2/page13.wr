@@ -2,7 +2,7 @@
   <ContentUnits>
     <MultiMessageUnit id="sv2#page13#mssu7" name="Mensaje" gr:x="0" gr:y="420"/>
     <IndexUnit id="sv2#page13#inu10" name="Lista Proveedores" linkOrder="sv2#page13#inu10#ln66 sv2#page13#inu10#ln67 sv2#page13#inu10#ln68" gr:x="25" gr:y="135" entity="ent2" displayAttributes="ent2#att4">
-      <Link id="sv2#page13#inu10#ln66" name="Detalles" to="sv2#page13#dau6" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page13#inu10#ln66" name="Detalles" to="sv2#page13#dau6" type="automatic" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page13#inu10#ln67" name="Eliminar" to="sv2#dlu5" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page13#inu10#ln68" name="Editar" to="sv2#seu11" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>

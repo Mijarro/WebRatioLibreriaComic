@@ -14,11 +14,11 @@
     </SelectorUnit>
     <MultiMessageUnit gr:x="5" gr:y="445" id="sv2#page12#mssu5" name="Mensaje"/>
     <IndexUnit id="sv2#page12#inu8" name="Lista Comics" linkOrder="sv2#page12#inu8#ln59 sv2#page12#inu8#ln60 sv2#page12#inu8#ln61" gr:x="100" gr:y="130" entity="ent3" displayAttributes="ent3#att5">
-      <Link id="sv2#page12#inu8#ln59" name="Detalles" to="sv2#page12#dau5" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page12#inu8#ln59" name="Detalles" to="sv2#page12#dau5" type="automatic" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page12#inu8#ln60" name="Eliminar" to="sv2#dlu6" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page12#inu8#ln61" name="Editar" to="sv2#seu10" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
-    <DataUnit id="sv2#page12#dau5" name="Comic Seleccionado" gr:x="80" gr:y="0" entity="ent3" displayAll="true">
+    <DataUnit id="sv2#page12#dau5" name="Comic Seleccionado" gr:x="80" gr:y="0" entity="ent3" displayAttributes="rel4#role7.ent2#att4 ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
       <Selector id="sv2#page12#dau5#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page12#dau5#su7#kcond5" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -100,6 +100,7 @@
       <layout:Cell/>
       <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page12#dau5">
+          <layout:Attribute attribute="rel4#role7.ent2#att4"/>
           <layout:Attribute attribute="ent3#att5"/>
           <layout:Attribute attribute="ent3#att9"/>
           <layout:Attribute attribute="ent3#att10"/>

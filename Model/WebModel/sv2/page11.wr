@@ -18,7 +18,7 @@
       </Link>
     </EntryUnit>
     <IndexUnit id="sv2#page11#inu11" name="Lista Categor&#237;as" linkOrder="sv2#page11#inu11#ln73 sv2#page11#inu11#ln74 sv2#page11#inu11#ln75" gr:x="25" gr:y="125" entity="ent4" displayAttributes="ent4#att8">
-      <Link id="sv2#page11#inu11#ln73" name="Detalles" to="sv2#page11#dau7" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page11#inu11#ln73" name="Detalles" to="sv2#page11#dau7" type="automatic" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page11#inu11#ln74" name="Eliminar" to="sv2#dlu7" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page11#inu11#ln75" name="Editar" to="sv2#seu12" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>

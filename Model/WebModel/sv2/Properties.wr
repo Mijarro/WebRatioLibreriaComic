@@ -13,7 +13,7 @@
         <KeyCondition id="sv2#seu6#su13#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="1015" gr:y="965" id="sv2#inn4" name="Is Not Null4" emptyStringAsNull="true">
+    <IsNotNullUnit gr:x="1065" gr:y="965" id="sv2#inn4" name="Is Not Null4" emptyStringAsNull="true">
       <OKLink id="sv2#inn4#oln9" name="OKFlow9" to="sv2#mfu4">
         <LinkParameter id="sv2#inn4#oln9#par22" name="email_PASSING_email" sourceLinkParameter="sv2#page6#enu5#ln11#par18" target="sv2#mfu4.email"/>
         <LinkParameter id="sv2#inn4#oln9#par23" name="password_PASSING_password" sourceLinkParameter="sv2#page6#enu5#ln11#par20" target="sv2#mfu4.password"/>
@@ -28,7 +28,7 @@
         <LinkParameter id="sv2#inn4#kln5#par33" name="userName_PASSING_userName" sourceLinkParameter="sv2#page6#enu5#ln11#par21" target="sv2#miu3.mov2#opm1#icu1#icp1"/>
       </KOLink>
     </IsNotNullUnit>
-    <ModifyUnit gr:x="1020" gr:y="1070" id="sv2#mfu4" name="Update4" entity="User">
+    <ModifyUnit gr:x="1070" gr:y="1070" id="sv2#mfu4" name="Update4" entity="User">
       <Selector id="sv2#mfu4#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu4#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
@@ -57,6 +57,8 @@
         <LinkParameter id="sv2#inn5#oln21#par45" name="FechaPublicacion_PASSING_FechaPublicacion" sourceLinkParameter="sv2#page12#enu16#ln62#par184" target="sv2#mfu6.ent3#att12"/>
         <LinkParameter id="sv2#inn5#oln21#par46" name="Precio_PASSING_Precio" sourceLinkParameter="sv2#page12#enu16#ln62#par185" target="sv2#mfu6.ent3#att9"/>
         <LinkParameter id="sv2#inn5#oln21#par47" name="TituloComic_PASSING_TituloComic" sourceLinkParameter="sv2#page12#enu16#ln62#par186" target="sv2#mfu6.ent3#att5"/>
+        <LinkParameter id="sv2#inn5#oln21#par34" name="ComicToCategorias_PASSING_Categorias.oid(ComicToCategorias)" sourceLinkParameter="sv2#page12#enu16#ln62#par189" target="sv2#mfu6.rel2#role4.ent4#att6"/>
+        <LinkParameter id="sv2#inn5#oln21#par59" name="Proveedor_PASSING_Proveedor.oid(ComicToProveedor)" sourceLinkParameter="sv2#page12#enu16#ln62#par188" target="sv2#mfu6.rel4#role7.ent2#att2"/>
       </OKLink>
     </IsNotNullUnit>
     <CreateUnit id="sv2#cru3" name="NuevoComic" gr:x="595" gr:y="555" entity="ent3">
@@ -166,7 +168,7 @@
     <CreateUnit id="sv2#cru5" name="Nuevo Proveedor" gr:x="1920" gr:y="555" entity="ent4">
       <OKLink id="sv2#cru5#oln35" name="OKFlow5" to="sv2#page11" automaticCoupling="true"/>
     </CreateUnit>
-    <PasswordUnit gr:x="1160" gr:y="1180" id="sv2#pwu1" name="Password1" passwordSize="8" minLowerCaseCharacters="1" minUpperCaseCharacters="1" minDigits="1">
+    <PasswordUnit gr:x="1240" gr:y="1120" id="sv2#pwu1" name="Password1" passwordSize="8" minLowerCaseCharacters="1" minUpperCaseCharacters="1" minDigits="1">
       <OKLink id="sv2#pwu1#oln4" name="OKFlow4" to="sv2#miu3">
         <LinkParameter id="sv2#pwu1#oln4#par1" name="Generated Password_password" source="password" target="sv2#miu3.mov2#opm1#icu1#icp2"/>
         <LinkParameter id="sv2#pwu1#oln4#par9" name="Email_PASSING_email" sourceLinkParameter="sv2#page6#enu2#ln14#par6" target="sv2#miu3.mov2#opm1#icu1#icp3"/>
