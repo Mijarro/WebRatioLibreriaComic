@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="510" id="sv3#page4" name="Carrito de la compra" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="480" id="sv3#page4" name="Carrito de la compra" landmark="true">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv3#page4#inu3" name="Listado de Comics" entity="ent3" displayAttributes="ent3#att5 ent3#att9" linkOrder="sv3#page4#inu3#ln13 sv3#page4#inu3#ln34">
       <Link id="sv3#page4#inu3#ln13" name="A&#241;adir al carrito" to="sv3#miu2" type="normal" validate="true">

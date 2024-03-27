@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="255" gr:y="105" id="mov2#opm2" name="Gestion Carrito">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#opm2#icu2" gr:x="30" gr:y="60">
+    <InputCollectorUnit id="mov2#opm2#icu2" gr:x="45" gr:y="150">
       <InputCollectorParameter id="mov2#opm2#icu2#icp7" name="oIDCarro"/>
       <InputCollectorParameter id="mov2#opm2#icu2#icp8" name="NombreComic_c"/>
       <InputCollectorParameter id="mov2#opm2#icu2#icp9" name="oIDComic_c"/>
@@ -15,11 +15,11 @@
         <LinkParameter id="mov2#opm2#icu2#oln61#par278" name="cantidad_c_PASSING" source="mov2#opm2#icu2#icp11" passing="true"/>
       </OKLink>
     </InputCollectorUnit>
-    <KOCollectorUnit gr:x="1170" gr:y="395" id="mov2#opm2#kocu2" name="KO Port2">
+    <KOCollectorUnit gr:x="1080" gr:y="340" id="mov2#opm2#kocu2" name="KO Port2">
       <OutputCollectorParameter id="mov2#opm2#kocu2#ocp5" name="Mensaje Error"/>
     </KOCollectorUnit>
-    <OKCollectorUnit gr:x="1170" gr:y="100" id="mov2#opm2#okcu2" name="OK Port2"/>
-    <SelectorUnit id="mov2#opm2#seu18" name="ExisteEnCarro" gr:x="365" gr:y="285" entity="ent1">
+    <OKCollectorUnit gr:x="1080" gr:y="175" id="mov2#opm2#okcu2" name="OK Port2"/>
+    <SelectorUnit id="mov2#opm2#seu18" name="ExisteEnCarro" gr:x="290" gr:y="480" entity="ent1">
       <Selector id="mov2#opm2#seu18#su23" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#opm2#seu18#su23#acond7" name="OidComic" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att19"/>
       </Selector>
@@ -27,14 +27,14 @@
         <LinkParameter id="mov2#opm2#seu18#oln50#par224" name="oid_Input" source="ent1#att17Array" target="mov2#opm2#inn10.isnotnull"/>
         <LinkParameter id="mov2#opm2#seu18#oln50#par225" name="Cantidad_c_PASSING" source="ent1#att21Array" passing="true"/>
       </OKLink>
-      <Link id="mov2#opm2#seu18#ln56" name="Flow36" to="mov2#opm2#cru9" type="transport" validate="true">
+      <Link id="mov2#opm2#seu18#ln56" name="Flow36" to="mov2#opm2#cru9" type="transport" validate="true" gr:bendpoints="399,101,-241,46">
         <LinkParameter id="mov2#opm2#seu18#ln56#par226" name="1_Cantidad_c" target="mov2#opm2#cru9.ent1#att21" sourceValue="1"/>
         <LinkParameter id="mov2#opm2#seu18#ln56#par227" name="NombreComic_c_NombreComic_c" sourceLinkParameter="mov2#opm2#seu20#oln54#par257" target="mov2#opm2#cru9.ent1#att18"/>
         <LinkParameter id="mov2#opm2#seu18#ln56#par228" name="oIDComic_c_oIDComic_c" sourceLinkParameter="mov2#opm2#seu20#oln54#par255" target="mov2#opm2#cru9.ent1#att19"/>
         <LinkParameter id="mov2#opm2#seu18#ln56#par229" name="PrecioComic_c_PrecioComic_c" sourceLinkParameter="mov2#opm2#seu20#oln54#par256" target="mov2#opm2#cru9.ent1#att20"/>
         <LinkParameter id="mov2#opm2#seu18#ln56#par230" name="Precio_PASSING_PrecioTotal" sourceLinkParameter="mov2#opm2#seu20#oln54#par256" target="mov2#opm2#cru9.ent1#att22"/>
       </Link>
-      <Link id="mov2#opm2#seu18#ln57" name="Flow38" to="mov2#opm2#mfu3" type="transport" validate="true">
+      <Link id="mov2#opm2#seu18#ln57" name="Flow38" to="mov2#opm2#mfu3" type="transport" validate="true" gr:bendpoints="296,-33,-399,192;522,-92,-173,133">
         <LinkParameter id="mov2#opm2#seu18#ln57#par231" name="oid_KeyCondition8 [oid]" source="ent1#att17Array" target="mov2#opm2#mfu3#su38#kcond21.ent1#att17"/>
         <LinkParameter id="mov2#opm2#seu18#ln57#par232" name="NombreComic_c_NombreComic_c" source="ent1#att18Array" target="mov2#opm2#mfu3.ent1#att18"/>
         <LinkParameter id="mov2#opm2#seu18#ln57#par233" name="oIDComic_c_oIDComic_c" source="ent1#att19Array" target="mov2#opm2#mfu3.ent1#att19"/>
@@ -45,7 +45,7 @@
         <LinkParameter id="mov2#opm2#seu18#ln58#par236" name="PrecioTotal_PrecioTotal" source="ent1#att22Array" target="mov2#opm2#mathu10#mathv14"/>
       </Link>
     </SelectorUnit>
-    <MathUnit id="mov2#opm2#mathu9" name="Restar1" gr:x="740" gr:y="100" resultType="float" defaultExpression="Cantidad-1">
+    <MathUnit id="mov2#opm2#mathu9" name="Restar1" gr:x="315" gr:y="70" resultType="float" defaultExpression="Cantidad-1">
       <MathVariable id="mov2#opm2#mathu9#mathv13" name="Cantidad"/>
       <OKLink id="mov2#opm2#mathu9#oln51" name="OKFlow17" to="mov2#opm2#seu19">
         <LinkParameter id="mov2#opm2#mathu9#oln51#par237" name="oid_PASSING_oIDComicCarro [oid]" sourceLinkParameter="mov2#opm2#inn11#oln60#par281" target="mov2#opm2#seu19#su36#kcond19.ent1#att17"/>
@@ -53,7 +53,7 @@
         <LinkParameter id="mov2#opm2#mathu9#oln51#par284" name="oIDCarro_PASSING" sourceLinkParameter="mov2#opm2#inn11#oln60#par281" passing="true"/>
       </OKLink>
     </MathUnit>
-    <SelectorUnit id="mov2#opm2#seu19" name="Selector8" gr:x="745" gr:y="225" entity="ent1">
+    <SelectorUnit id="mov2#opm2#seu19" name="Selector8" gr:x="460" gr:y="50" entity="ent1">
       <Selector id="mov2#opm2#seu19#su36" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#opm2#seu19#su36#acond8" name="EsCero" predicate="gt" booleanOperator="or" implied="false" attributes="ent1#att21" value="1"/>
         <KeyCondition id="mov2#opm2#seu19#su36#kcond19" name="oIDComicCarro" predicate="in" implied="false"/>
@@ -68,7 +68,7 @@
         <LinkParameter id="mov2#opm2#seu19#oln52#par285" name="oIDCarro_PASSING" sourceLinkParameter="mov2#opm2#mathu9#oln51#par284" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit id="mov2#opm2#inn9" name="Is Not Null3" gr:x="895" gr:y="460" emptyStringAsNull="true">
+    <IsNotNullUnit id="mov2#opm2#inn9" name="Is Not el ultimo" gr:x="650" gr:y="80" emptyStringAsNull="true">
       <OKLink id="mov2#opm2#inn9#oln53" name="OKFlow36" to="mov2#opm2#mathu11">
         <LinkParameter id="mov2#opm2#inn9#oln53#par247" name="PrecioComic_c_PASSING_PrecioComic" sourceLinkParameter="mov2#opm2#seu19#oln52#par244" target="mov2#opm2#mathu11#mathv17"/>
         <LinkParameter id="mov2#opm2#inn9#oln53#par248" name="PrecioTotal_PASSING_PrecioTotal" sourceLinkParameter="mov2#opm2#seu19#oln52#par246" target="mov2#opm2#mathu11#mathv16"/>
@@ -82,7 +82,7 @@
         <LinkParameter id="mov2#opm2#inn9#kln21#par289" name="oIDCarro_PASSING_KeyCondition6 [oid]" sourceLinkParameter="mov2#opm2#seu19#oln52#par285" target="mov2#opm2#dlu2#su39#kcond22.ent1#att17"/>
       </KOLink>
     </IsNotNullUnit>
-    <SelectorUnit id="mov2#opm2#seu20" name="Selector5" gr:x="410" gr:y="75" entity="ent3">
+    <SelectorUnit id="mov2#opm2#seu20" name="Selector5" gr:x="315" gr:y="335" entity="ent3">
       <Selector id="mov2#opm2#seu20#su37" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#opm2#seu20#su37#kcond20" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
@@ -93,7 +93,7 @@
         <LinkParameter id="mov2#opm2#seu20#oln54#par257" name="TituloComic_PASSING" source="ent3#att5Array" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <MathUnit id="mov2#opm2#mathu10" name="CosteProductoSuma" gr:x="420" gr:y="555" resultType="float" defaultExpression="PrecioTotal+PrecioComic">
+    <MathUnit id="mov2#opm2#mathu10" name="CosteProductoSuma" gr:x="625" gr:y="325" resultType="float" defaultExpression="PrecioTotal+PrecioComic">
       <MathVariable id="mov2#opm2#mathu10#mathv14" name="PrecioTotal"/>
       <MathVariable id="mov2#opm2#mathu10#mathv15" name="PrecioComic"/>
       <OKLink id="mov2#opm2#mathu10#oln55" name="OKFlow37" to="mov2#opm2#mfu3">
@@ -101,7 +101,7 @@
         <LinkParameter id="mov2#opm2#mathu10#oln55#par259" name="Result_PrecioTotal" source="result" target="mov2#opm2#mfu3.ent1#att22"/>
       </OKLink>
     </MathUnit>
-    <ModifyUnit id="mov2#opm2#mfu3" name="Update1" gr:x="545" gr:y="390" entity="ent1">
+    <ModifyUnit id="mov2#opm2#mfu3" name="Update1" gr:x="890" gr:y="255" entity="ent1">
       <Selector id="mov2#opm2#mfu3#su38" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#opm2#mfu3#su38#kcond21" name="KeyCondition8" predicate="in" implied="false"/>
       </Selector>
@@ -110,7 +110,7 @@
       </KOLink>
       <OKLink id="mov2#opm2#mfu3#oln65" name="OKFlow65" to="mov2#opm2#okcu2" automaticCoupling="true"/>
     </ModifyUnit>
-    <MathUnit id="mov2#opm2#mathu11" name="CosteProductoResta" gr:x="650" gr:y="550" resultType="float" defaultExpression="PrecioTotal-PrecioComic">
+    <MathUnit id="mov2#opm2#mathu11" name="CosteProductoResta" gr:x="625" gr:y="225" resultType="float" defaultExpression="PrecioTotal-PrecioComic">
       <MathVariable id="mov2#opm2#mathu11#mathv16" name="PrecioTotal"/>
       <MathVariable id="mov2#opm2#mathu11#mathv17" name="PrecioComic"/>
       <OKLink id="mov2#opm2#mathu11#oln56" name="OKFlow38" to="mov2#opm2#mfu3">
@@ -122,25 +122,25 @@
         <LinkParameter id="mov2#opm2#mathu11#oln56#par265" name="PrecioComic_c_PASSING_PrecioComic_c" sourceLinkParameter="mov2#opm2#inn9#oln53#par253" target="mov2#opm2#mfu3.ent1#att20"/>
       </OKLink>
     </MathUnit>
-    <IsNotNullUnit id="mov2#opm2#inn10" name="Is Not Null1" gr:x="590" gr:y="295" emptyStringAsNull="true">
+    <IsNotNullUnit id="mov2#opm2#inn10" name="Is Not Nuevo" gr:x="665" gr:y="555" emptyStringAsNull="true">
       <OKLink id="mov2#opm2#inn10#oln57" name="OKFlow12" to="mov2#opm2#mathu12">
         <LinkParameter id="mov2#opm2#inn10#oln57#par266" name="Cantidad_c_PASSING_Sumar" sourceLinkParameter="mov2#opm2#seu18#oln50#par225" target="mov2#opm2#mathu12#mathv18"/>
       </OKLink>
       <KOLink id="mov2#opm2#inn10#kln19" name="KOFlow2" to="mov2#opm2#cru9" automaticCoupling="true"/>
     </IsNotNullUnit>
-    <CreateUnit id="mov2#opm2#cru9" name="DarAltaCarroCompra" gr:x="525" gr:y="170" entity="ent1">
+    <CreateUnit id="mov2#opm2#cru9" name="DarAltaCarroCompra" gr:x="875" gr:y="540" entity="ent1">
       <KOLink id="mov2#opm2#cru9#kln23" name="KOFlow23" to="mov2#opm2#kocu2">
         <LinkParameter id="mov2#opm2#cru9#kln23#par297" name="No se ha podido agregar este producto al carrito._Mensaje Error" sourceValue="No se ha podido agregar este producto al carrito." target="mov2#opm2#kocu2#ocp5"/>
       </KOLink>
       <OKLink id="mov2#opm2#cru9#oln64" name="OKFlow64" to="mov2#opm2#okcu2" automaticCoupling="true"/>
     </CreateUnit>
-    <MathUnit id="mov2#opm2#mathu12" name="Sumar1" gr:x="275" gr:y="445" resultType="integer" defaultExpression="Cantidad+1">
+    <MathUnit id="mov2#opm2#mathu12" name="Sumar1" gr:x="670" gr:y="435" resultType="integer" defaultExpression="Cantidad+1">
       <MathVariable id="mov2#opm2#mathu12#mathv18" name="Cantidad"/>
       <OKLink id="mov2#opm2#mathu12#oln58" name="OKFlow15" to="mov2#opm2#mathu10">
         <LinkParameter id="mov2#opm2#mathu12#oln58#par267" name="Result_PASSING" source="result" passing="true"/>
       </OKLink>
     </MathUnit>
-    <IsNotNullUnit gr:x="275" gr:y="200" id="mov2#opm2#inn11" name="Is Not Null11" emptyStringAsNull="true">
+    <IsNotNullUnit gr:x="320" gr:y="205" id="mov2#opm2#inn11" name="Is Borrar1" emptyStringAsNull="true">
       <OKLink id="mov2#opm2#inn11#oln60" name="OKFlow59" to="mov2#opm2#mathu9">
         <LinkParameter id="mov2#opm2#inn11#oln60#par279" name="cantidad_c_PASSING_Cantidad" sourceLinkParameter="mov2#opm2#icu2#oln61#par278" target="mov2#opm2#mathu9#mathv13"/>
         <LinkParameter id="mov2#opm2#inn11#oln60#par280" name="NombreComic_c_PASSING" sourceLinkParameter="mov2#opm2#icu2#oln61#par273" passing="true"/>
@@ -152,7 +152,7 @@
         <LinkParameter id="mov2#opm2#inn11#kln20#par271" name="Input Value_KeyCondition5 [oid]" target="mov2#opm2#seu20#su37#kcond20.ent3#att3" sourceLinkParameter="mov2#opm2#icu2#oln61#par275"/>
       </KOLink>
     </IsNotNullUnit>
-    <DeleteUnit id="mov2#opm2#dlu2" name="CarBajaCarroCompra" gr:x="987" gr:y="231" entity="ent1">
+    <DeleteUnit id="mov2#opm2#dlu2" name="CarBajaCarroCompra" gr:x="875" gr:y="60" entity="ent1">
       <Selector id="mov2#opm2#dlu2#su39" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#opm2#dlu2#su39#kcond22" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>

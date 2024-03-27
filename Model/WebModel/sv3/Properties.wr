@@ -15,7 +15,7 @@
       <OKLink id="sv3#mfu4#oln9" name="OKFlow9" to="sv3#page7" automaticCoupling="true"/>
       <KOLink id="sv3#mfu4#kln10" name="KOFlow10" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit id="sv3#seu3" name="SelectorComic" gr:x="505" gr:y="1105" entity="ent4" linkOrder="sv3#seu3#ln36">
+    <SelectorUnit id="sv3#seu3" name="SelectorComic" gr:x="290" gr:y="815" entity="ent4" linkOrder="sv3#seu3#ln36">
       <Selector id="sv3#seu3#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#seu3#su5#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -27,11 +27,11 @@
       <Selector id="sv3#dlu1#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu1#su8#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv3#dlu1#oln8" name="OKFlow8" to="sv3#page4#inu6" automaticCoupling="true" gr:bendpoints="-108,15,97,15"/>
+      <OKLink id="sv3#dlu1#oln8" name="OKFlow8" to="sv3#page4#inu6" automaticCoupling="true" gr:bendpoints="-187,64,188,-1"/>
       <KOLink id="sv3#dlu1#kln11" name="KOFlow11" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </DeleteUnit>
-    <ModuleInstanceUnit gr:x="825" gr:y="825" id="sv3#miu2" action="true" moduleId="mov2#opm2">
-      <OKLink id="sv3#miu2#oln62" name="OKFlow62" to="sv3#page4#inu6" automaticCoupling="true"/>
+    <ModuleInstanceUnit gr:x="565" gr:y="790" id="sv3#miu2" action="true" moduleId="mov2#opm2">
+      <OKLink id="sv3#miu2#oln62" name="OKFlow62" to="sv3#page4#inu6" automaticCoupling="true" gr:bendpoints="-136,-122,69,158"/>
       <KOLink id="sv3#miu2#kln25" name="KOFlow25" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
