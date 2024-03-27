@@ -6,7 +6,7 @@
       </Selector>
     </DataUnit>
     <IndexUnit id="sv3#page3#inu4" name="Lista Categor&#237;as" linkOrder="sv3#page3#inu4#ln3 sv3#page3#inu4#ln4" gr:x="25" gr:y="125" entity="ent4" displayAttributes="ent4#att8">
-      <Link id="sv3#page3#inu4#ln3" name="Seleccionar" to="sv3#page3#dau1" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page3#inu4#ln3" name="Seleccionar" to="sv3#page3#dau1" type="automatic" automaticCoupling="true" validate="true"/>
       <Link id="sv3#page3#inu4#ln4" name="Buscar C&#243;mics" to="sv3#seu3" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
     <IndexUnit gr:x="40" gr:y="235" id="sv3#page3#inu7" name="Comics" entity="ent3" linkOrder="sv3#page3#inu7#ln37" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
