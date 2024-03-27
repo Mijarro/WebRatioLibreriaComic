@@ -1,9 +1,6 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="privado" protected="true" homePage="sv2#page6" landmarks="sv2#lou1 sv2#page11 sv2#page12 sv2#page13 sv2#page8">
   <OperationUnits>
     <LogoutUnit gr:x="190" gr:y="1125" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
-    <CreateUnit gr:x="985" gr:y="790" id="sv2#cru1" name="Crear Usuario" entity="User">
-      <OKLink id="sv2#cru1#oln1" name="OKFlow1" to="sv2#page6" automaticCoupling="true"/>
-    </CreateUnit>
     <SelectorUnit gr:x="415" gr:y="905" id="sv2#seu6" name="Selector6" entity="User">
       <OKLink id="sv2#seu6#oln7" name="OKFlow7" to="sv2#page6#enu5">
         <LinkParameter id="sv2#seu6#oln7#par12" name="email_email" source="emailArray" target="sv2#page6#enu5#fld19_slot"/>
@@ -16,7 +13,7 @@
         <KeyCondition id="sv2#seu6#su13#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="995" gr:y="925" id="sv2#inn4" name="Is Not Null4" emptyStringAsNull="true">
+    <IsNotNullUnit gr:x="1015" gr:y="965" id="sv2#inn4" name="Is Not Null4" emptyStringAsNull="true">
       <OKLink id="sv2#inn4#oln9" name="OKFlow9" to="sv2#mfu4">
         <LinkParameter id="sv2#inn4#oln9#par22" name="email_PASSING_email" sourceLinkParameter="sv2#page6#enu5#ln11#par18" target="sv2#mfu4.email"/>
         <LinkParameter id="sv2#inn4#oln9#par23" name="password_PASSING_password" sourceLinkParameter="sv2#page6#enu5#ln11#par20" target="sv2#mfu4.password"/>
@@ -24,14 +21,14 @@
         <LinkParameter id="sv2#inn4#oln9#par26" name="defaultGroup_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv2#page6#enu5#ln11#par25" target="sv2#mfu4.User2DefaultGroup.groupOID"/>
         <LinkParameter id="sv2#inn4#oln9#par32" name="Input Value_KeyCondition14 [oid]" source="inputValue" target="sv2#mfu4#su14#kcond14.userOID"/>
       </OKLink>
-      <KOLink id="sv2#inn4#kln5" name="KOFlow5" to="sv2#cru1">
-        <LinkParameter id="sv2#inn4#kln5#par27" name="email_PASSING_email" sourceLinkParameter="sv2#page6#enu5#ln11#par18" target="sv2#cru1.email"/>
-        <LinkParameter id="sv2#inn4#kln5#par28" name="defaultGroup_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv2#page6#enu5#ln11#par25" target="sv2#cru1.User2DefaultGroup.groupOID"/>
-        <LinkParameter id="sv2#inn4#kln5#par30" name="password_PASSING_password" sourceLinkParameter="sv2#page6#enu5#ln11#par20" target="sv2#cru1.password"/>
-        <LinkParameter id="sv2#inn4#kln5#par31" name="userName_PASSING_userName" sourceLinkParameter="sv2#page6#enu5#ln11#par21" target="sv2#cru1.userName"/>
+      <KOLink id="sv2#inn4#kln5" name="KOFlow5" to="sv2#miu3">
+        <LinkParameter id="sv2#inn4#kln5#par13" name="email_PASSING_email" sourceLinkParameter="sv2#page6#enu5#ln11#par18" target="sv2#miu3.mov2#opm1#icu1#icp3"/>
+        <LinkParameter id="sv2#inn4#kln5#par30" name="defaultGroup_PASSING_group" sourceLinkParameter="sv2#page6#enu5#ln11#par25" target="sv2#miu3.mov2#opm1#icu1#icp6"/>
+        <LinkParameter id="sv2#inn4#kln5#par31" name="password_PASSING_password" sourceLinkParameter="sv2#page6#enu5#ln11#par20" target="sv2#miu3.mov2#opm1#icu1#icp2"/>
+        <LinkParameter id="sv2#inn4#kln5#par33" name="userName_PASSING_userName" sourceLinkParameter="sv2#page6#enu5#ln11#par21" target="sv2#miu3.mov2#opm1#icu1#icp1"/>
       </KOLink>
     </IsNotNullUnit>
-    <ModifyUnit gr:x="1000" gr:y="1030" id="sv2#mfu4" name="Update4" entity="User">
+    <ModifyUnit gr:x="1020" gr:y="1070" id="sv2#mfu4" name="Update4" entity="User">
       <Selector id="sv2#mfu4#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu4#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
@@ -144,17 +141,14 @@
     <CreateUnit id="sv2#cru5" name="Nuevo Proveedor" gr:x="1920" gr:y="555" entity="ent4">
       <OKLink id="sv2#cru5#oln35" name="OKFlow5" to="sv2#page11" automaticCoupling="true"/>
     </CreateUnit>
-    <PasswordUnit gr:x="1040" gr:y="1310" id="sv2#pwu1" name="Password1" passwordSize="8" minLowerCaseCharacters="1" minUpperCaseCharacters="1" minDigits="1" linkOrder="sv2#pwu1#ln16">
-      <OKLink id="sv2#pwu1#oln4" name="OKFlow4" to="sv2#tmu1" automaticCoupling="true"/>
-      <Link id="sv2#pwu1#ln16" name="Flow16" to="sv2#cru1" type="transport" validate="true" gr:bendpoints="73,-287,119,219">
-        <LinkParameter id="sv2#pwu1#ln16#par100" name="Generated Password_password" source="password" target="sv2#cru1.password"/>
-      </Link>
-    </PasswordUnit>
-    <TimeUnit gr:x="1225" gr:y="1025" id="sv2#tmu1" name="Time1">
-      <OKLink id="sv2#tmu1#oln5" name="OKFlow5" to="sv2#cru1">
-        <LinkParameter id="sv2#tmu1#oln5#par99" name="Current/Input Timestamp_fecha_alta" source="currentTimestamp" target="sv2#cru1.User#att7"/>
+    <PasswordUnit gr:x="1160" gr:y="1180" id="sv2#pwu1" name="Password1" passwordSize="8" minLowerCaseCharacters="1" minUpperCaseCharacters="1" minDigits="1">
+      <OKLink id="sv2#pwu1#oln4" name="OKFlow4" to="sv2#miu3">
+        <LinkParameter id="sv2#pwu1#oln4#par1" name="Generated Password_password" source="password" target="sv2#miu3.mov2#opm1#icu1#icp2"/>
+        <LinkParameter id="sv2#pwu1#oln4#par9" name="Email_PASSING_email" sourceLinkParameter="sv2#page6#enu2#ln14#par6" target="sv2#miu3.mov2#opm1#icu1#icp3"/>
+        <LinkParameter id="sv2#pwu1#oln4#par10" name="Grupo_PASSING_group" sourceLinkParameter="sv2#page6#enu2#ln14#par7" target="sv2#miu3.mov2#opm1#icu1#icp6"/>
+        <LinkParameter id="sv2#pwu1#oln4#par11" name="Nombre Usuario_PASSING_userName" sourceLinkParameter="sv2#page6#enu2#ln14#par8" target="sv2#miu3.mov2#opm1#icu1#icp1"/>
       </OKLink>
-    </TimeUnit>
+    </PasswordUnit>
     <LoopUnit gr:x="245" gr:y="645" id="sv2#lpu1" name="Loop1">
       <SecondaryArray id="sv2#lpu1#lsa2" name="Precio"/>
       <SecondaryArray id="sv2#lpu1#lsa3" name="Descripcion"/>
@@ -238,5 +232,8 @@
         <LinkParameter id="sv2#exu2#oln40#par172" name="TituloComic_Input Array" source="sv2#exu2#ci13Array" target="sv2#lpu3.array"/>
       </OKLink>
     </ExcelUnit>
+    <ModuleInstanceUnit gr:x="1010" gr:y="810" id="sv2#miu3" action="true" moduleId="mov2#opm1">
+      <OKLink id="sv2#miu3#oln2" name="OKFlow2" to="sv2#page6" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

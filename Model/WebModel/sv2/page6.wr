@@ -29,11 +29,10 @@
       <Field id="sv2#page6#enu2#fld4" name="Nombre Usuario" type="string" modifiable="true" attribute="userName"/>
       <Field id="sv2#page6#enu2#fld5" name="Email" type="string" modifiable="true" attribute="email"/>
       <SelectionField id="sv2#page6#enu2#sfld2" name="Grupo" type="string" role="User2DefaultGroup"/>
-      <Link id="sv2#page6#enu2#ln14" name="Crear" to="sv2#pwu1" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv2#page6#enu2#ln33" name="Flow33" to="sv2#cru1" type="transport" validate="true" gr:bendpoints="374,-57,20,449;362,-290,128,216">
-        <LinkParameter id="sv2#page6#enu2#ln33#par101" name="email_email" source="sv2#page6#enu2#fld5" target="sv2#cru1.email"/>
-        <LinkParameter id="sv2#page6#enu2#ln33#par102" name="userName_userName" source="sv2#page6#enu2#fld4" target="sv2#cru1.userName"/>
-        <LinkParameter id="sv2#page6#enu2#ln33#par103" name="defaultGroup_Group.oid(defaultGroup)" source="sv2#page6#enu2#sfld2" target="sv2#cru1.User2DefaultGroup.groupOID"/>
+      <Link id="sv2#page6#enu2#ln14" name="Crear" to="sv2#pwu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page6#enu2#ln14#par6" name="Email_PASSING" source="sv2#page6#enu2#fld5" passing="true"/>
+        <LinkParameter id="sv2#page6#enu2#ln14#par7" name="Grupo_PASSING" source="sv2#page6#enu2#sfld2" passing="true"/>
+        <LinkParameter id="sv2#page6#enu2#ln14#par8" name="Nombre Usuario_PASSING" source="sv2#page6#enu2#fld4" passing="true"/>
       </Link>
       <Field id="sv2#page6#enu2#fld6" name="oid" type="integer" attribute="userOID" hidden="true"/>
     </EntryUnit>
