@@ -30,7 +30,7 @@
       <OKLink id="sv3#dlu1#oln8" name="OKFlow8" to="sv3#page4#inu6" automaticCoupling="true" gr:bendpoints="-108,15,97,15"/>
       <KOLink id="sv3#dlu1#kln11" name="KOFlow11" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </DeleteUnit>
-    <ModuleInstanceUnit gr:x="350" gr:y="830" id="sv3#miu2" action="true" moduleId="mov2#opm2">
+    <ModuleInstanceUnit gr:x="825" gr:y="825" id="sv3#miu2" action="true" moduleId="mov2#opm2">
       <OKLink id="sv3#miu2#oln62" name="OKFlow62" to="sv3#page4#inu6" automaticCoupling="true"/>
       <KOLink id="sv3#miu2#kln25" name="KOFlow25" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </ModuleInstanceUnit>

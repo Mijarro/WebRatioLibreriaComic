@@ -41,9 +41,22 @@
       <OKLink id="sv2#dlu4#oln20" name="OKFlow20" to="sv2#page6" automaticCoupling="true"/>
     </DeleteUnit>
     <IsNotNullUnit id="sv2#inn5" name="Is Not Null1" gr:x="585" gr:y="460" emptyStringAsNull="true">
-      <KOLink id="sv2#inn5#kln6" name="KOFlow1" to="sv2#cru3"/>
+      <KOLink id="sv2#inn5#kln6" name="KOFlow1" to="sv2#cru3">
+        <LinkParameter id="sv2#inn5#kln6#par48" name="Autor_PASSING_Autor" sourceLinkParameter="sv2#page12#enu16#ln62#par181" target="sv2#cru3.ent3#att13"/>
+        <LinkParameter id="sv2#inn5#kln6#par49" name="DescripcionComic_PASSING_DescripcionComic" sourceLinkParameter="sv2#page12#enu16#ln62#par182" target="sv2#cru3.ent3#att10"/>
+        <LinkParameter id="sv2#inn5#kln6#par50" name="Edad_PASSING_Edad" sourceLinkParameter="sv2#page12#enu16#ln62#par183" target="sv2#cru3.ent3#att11"/>
+        <LinkParameter id="sv2#inn5#kln6#par51" name="FechaPublicacion_PASSING_FechaPublicacion" sourceLinkParameter="sv2#page12#enu16#ln62#par184" target="sv2#cru3.ent3#att12"/>
+        <LinkParameter id="sv2#inn5#kln6#par52" name="Precio_PASSING_Precio" sourceLinkParameter="sv2#page12#enu16#ln62#par185" target="sv2#cru3.ent3#att9"/>
+        <LinkParameter id="sv2#inn5#kln6#par53" name="TituloComic_PASSING_TituloComic" sourceLinkParameter="sv2#page12#enu16#ln62#par186" target="sv2#cru3.ent3#att5"/>
+      </KOLink>
       <OKLink id="sv2#inn5#oln21" name="OKFlow10" to="sv2#mfu6">
         <LinkParameter id="sv2#inn5#oln21#par36" name="Input Value_KeyCondition5 [oid]" source="inputValue" target="sv2#mfu6#su29#kcond29.ent3#att3"/>
+        <LinkParameter id="sv2#inn5#oln21#par42" name="Autor_PASSING_Autor" sourceLinkParameter="sv2#page12#enu16#ln62#par181" target="sv2#mfu6.ent3#att13"/>
+        <LinkParameter id="sv2#inn5#oln21#par43" name="DescripcionComic_PASSING_DescripcionComic" sourceLinkParameter="sv2#page12#enu16#ln62#par182" target="sv2#mfu6.ent3#att10"/>
+        <LinkParameter id="sv2#inn5#oln21#par44" name="Edad_PASSING_Edad" sourceLinkParameter="sv2#page12#enu16#ln62#par183" target="sv2#mfu6.ent3#att11"/>
+        <LinkParameter id="sv2#inn5#oln21#par45" name="FechaPublicacion_PASSING_FechaPublicacion" sourceLinkParameter="sv2#page12#enu16#ln62#par184" target="sv2#mfu6.ent3#att12"/>
+        <LinkParameter id="sv2#inn5#oln21#par46" name="Precio_PASSING_Precio" sourceLinkParameter="sv2#page12#enu16#ln62#par185" target="sv2#mfu6.ent3#att9"/>
+        <LinkParameter id="sv2#inn5#oln21#par47" name="TituloComic_PASSING_TituloComic" sourceLinkParameter="sv2#page12#enu16#ln62#par186" target="sv2#mfu6.ent3#att5"/>
       </OKLink>
     </IsNotNullUnit>
     <CreateUnit id="sv2#cru3" name="NuevoComic" gr:x="595" gr:y="555" entity="ent3">
@@ -77,16 +90,21 @@
         <LinkParameter id="sv2#seu10#oln41#par198" name="ComicToProveedor.oid_Proveedor - Preselection" source="rel4#role7_ent2#att2Array" target="sv2#page12#enu16#sfld1_presel"/>
       </OKLink>
     </SelectorUnit>
-    <ModifyUnit id="sv2#mfu6" name="Update2" gr:x="595" gr:y="335" entity="ent3">
+    <ModifyUnit id="sv2#mfu6" name="Update2" gr:x="595" gr:y="320" entity="ent3">
       <Selector id="sv2#mfu6#su29" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu6#su29#kcond29" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#mfu6#oln47" name="OKFlow47" to="sv2#page12" automaticCoupling="true"/>
     </ModifyUnit>
     <IsNotNullUnit id="sv2#inn6" name="Is Not Null1" gr:x="1920" gr:y="480" emptyStringAsNull="true">
-      <KOLink id="sv2#inn6#kln7" name="KOFlow1" to="sv2#cru5"/>
+      <KOLink id="sv2#inn6#kln7" name="KOFlow1" to="sv2#cru5">
+        <LinkParameter id="sv2#inn6#kln7#par56" name="DescripcionCategoria_PASSING_DescripcionCategoria" sourceLinkParameter="sv2#page11#enu20#ln71#par215" target="sv2#cru5.ent4#att14"/>
+        <LinkParameter id="sv2#inn6#kln7#par57" name="Nombrecategoria_PASSING_Nombrecategoria" sourceLinkParameter="sv2#page11#enu20#ln71#par216" target="sv2#cru5.ent4#att8"/>
+      </KOLink>
       <OKLink id="sv2#inn6#oln27" name="OKFlow10" to="sv2#mfu5">
         <LinkParameter id="sv2#inn6#oln27#par62" name="Input Value_KeyCondition5 [oid]" source="inputValue" target="sv2#mfu5#su27#kcond27.ent4#att6"/>
+        <LinkParameter id="sv2#inn6#oln27#par54" name="DescripcionCategoria_PASSING_DescripcionCategoria" sourceLinkParameter="sv2#page11#enu20#ln71#par215" target="sv2#mfu5.ent4#att14"/>
+        <LinkParameter id="sv2#inn6#oln27#par55" name="Nombrecategoria_PASSING_Nombrecategoria" sourceLinkParameter="sv2#page11#enu20#ln71#par216" target="sv2#mfu5.ent4#att8"/>
       </OKLink>
     </IsNotNullUnit>
     <DeleteUnit id="sv2#dlu6" name="EliminarComic" gr:x="100" gr:y="210" entity="ent3">
@@ -106,10 +124,17 @@
         <LinkParameter id="sv2#seu11#oln42#par213" name="TelefonoProveedor_TelefonoProveedor" source="ent2#att16Array" target="sv2#page13#enu18#fld34_slot"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit id="sv2#inn7" name="Is Not Null1" gr:x="1285" gr:y="430" emptyStringAsNull="true">
-      <KOLink id="sv2#inn7#kln8" name="KOFlow1" to="sv2#cru4"/>
+    <IsNotNullUnit id="sv2#inn7" name="Is Not Null1" gr:x="1300" gr:y="450" emptyStringAsNull="true">
+      <KOLink id="sv2#inn7#kln8" name="KOFlow1" to="sv2#cru4">
+        <LinkParameter id="sv2#inn7#kln8#par35" name="EmailProveedor_PASSING_EmailProveedor" sourceLinkParameter="sv2#page13#enu18#ln69#par205" target="sv2#cru4.ent2#att15"/>
+        <LinkParameter id="sv2#inn7#kln8#par37" name="NombreProveedor_PASSING_NombreProveedor" sourceLinkParameter="sv2#page13#enu18#ln69#par206" target="sv2#cru4.ent2#att4"/>
+        <LinkParameter id="sv2#inn7#kln8#par38" name="TelefonoProveedor_PASSING_TelefonoProveedor" sourceLinkParameter="sv2#page13#enu18#ln69#par208" target="sv2#cru4.ent2#att16"/>
+      </KOLink>
       <OKLink id="sv2#inn7#oln30" name="OKFlow10" to="sv2#mfu7">
         <LinkParameter id="sv2#inn7#oln30#par72" name="Input Value_KeyCondition5 [oid]" source="inputValue" target="sv2#mfu7#su34#kcond34.ent2#att2"/>
+        <LinkParameter id="sv2#inn7#oln30#par39" name="EmailProveedor_PASSING_EmailProveedor" sourceLinkParameter="sv2#page13#enu18#ln69#par205" target="sv2#mfu7.ent2#att15"/>
+        <LinkParameter id="sv2#inn7#oln30#par40" name="NombreProveedor_PASSING_NombreProveedor" sourceLinkParameter="sv2#page13#enu18#ln69#par206" target="sv2#mfu7.ent2#att4"/>
+        <LinkParameter id="sv2#inn7#oln30#par41" name="TelefonoProveedor_PASSING_TelefonoProveedor" sourceLinkParameter="sv2#page13#enu18#ln69#par208" target="sv2#mfu7.ent2#att16"/>
       </OKLink>
     </IsNotNullUnit>
     <DeleteUnit id="sv2#dlu7" name="Eliminar Categoria" gr:x="1330" gr:y="210" entity="ent4">
@@ -118,10 +143,10 @@
       </Selector>
       <OKLink id="sv2#dlu7#oln31" name="OKFlow2" to="sv2#page11" automaticCoupling="true"/>
     </DeleteUnit>
-    <CreateUnit id="sv2#cru4" name="Nuevo Proveedor" gr:x="1285" gr:y="505" entity="ent2">
+    <CreateUnit id="sv2#cru4" name="Nuevo Proveedor" gr:x="1285" gr:y="555" entity="ent2">
       <OKLink id="sv2#cru4#oln32" name="OKFlow5" to="sv2#page13" automaticCoupling="true"/>
     </CreateUnit>
-    <ModifyUnit id="sv2#mfu7" name="Update2" gr:x="1290" gr:y="325" entity="ent2">
+    <ModifyUnit id="sv2#mfu7" name="Update2" gr:x="1315" gr:y="325" entity="ent2">
       <Selector id="sv2#mfu7#su34" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu7#su34#kcond34" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
