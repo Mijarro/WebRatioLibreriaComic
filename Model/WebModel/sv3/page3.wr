@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page3" name="Categorias" landmark="true" gr:x="30" gr:y="775">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page3" name="Categorias" landmark="true" gr:x="225" gr:y="780">
   <ContentUnits>
     <DataUnit id="sv3#page3#dau1" name="Categoria Seleccionada" gr:x="0" gr:y="0" entity="ent4" displayAll="true">
       <Selector id="sv3#page3#dau1#su3" defaultPolicy="fill" booleanOperator="and">
@@ -7,10 +7,13 @@
     </DataUnit>
     <IndexUnit id="sv3#page3#inu4" name="Lista Categor&#237;as" linkOrder="sv3#page3#inu4#ln3 sv3#page3#inu4#ln4" gr:x="25" gr:y="125" entity="ent4" displayAttributes="ent4#att8">
       <Link id="sv3#page3#inu4#ln3" name="Seleccionar" to="sv3#page3#dau1" type="automatic" automaticCoupling="true" validate="true"/>
-      <Link id="sv3#page3#inu4#ln4" name="Buscar C&#243;mics" to="sv3#seu3" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page3#inu4#ln4" name="Buscar C&#243;mics" to="sv3#page3#inu7" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
-    <IndexUnit gr:x="40" gr:y="235" id="sv3#page3#inu7" name="Comics" entity="ent3" linkOrder="sv3#page3#inu7#ln37" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
+    <IndexUnit gr:x="15" gr:y="235" id="sv3#page3#inu7" name="Comics" entity="ent3" linkOrder="sv3#page3#inu7#ln37" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
       <Link id="sv3#page3#inu7#ln37" name="A&#241;adir al carrito" to="sv3#miu2" automaticCoupling="true" type="normal" validate="true"/>
+      <Selector id="sv3#page3#inu7#su2" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page3#inu7#su2#rcond2" name="Categoria" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
     </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

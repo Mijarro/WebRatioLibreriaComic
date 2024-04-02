@@ -48,13 +48,13 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="185" gr:y="635" id="ent2" name="Proveedor" duration="persistent" db:database="db2" db:table="proveedor" attributeOrder="ent2#att2 ent2#att4 ent2#att15 ent2#att16">
+  <Entity gr:x="20" gr:y="465" id="ent2" name="Proveedor" duration="persistent" db:database="db2" db:table="proveedor" attributeOrder="ent2#att2 ent2#att4 ent2#att15 ent2#att16">
     <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att4" name="NombreProveedor" type="string" db:column="nombreproveedor"/>
     <Attribute id="ent2#att15" name="EmailProveedor" type="string" db:column="emailproveedor"/>
     <Attribute id="ent2#att16" name="TelefonoProveedor" type="integer" db:column="telefonoproveedor"/>
   </Entity>
-  <Entity gr:x="580" gr:y="605" id="ent3" name="Comic" duration="persistent" db:database="db2" db:table="comic" attributeOrder="ent3#att3 ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
+  <Entity gr:x="255" gr:y="435" id="ent3" name="Comic" duration="persistent" db:database="db2" db:table="comic" attributeOrder="ent3#att3 ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
     <Attribute id="ent3#att3" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att5" name="TituloComic" type="string" db:column="titulocomic"/>
     <Attribute id="ent3#att9" name="Precio" type="float" db:column="precio"/>
@@ -64,7 +64,7 @@
     <Attribute id="ent3#att13" name="Autor" type="string" db:column="autor"/>
   </Entity>
   <db:Database id="db2" name="LibreriaComics" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/LibreriaComics" username="postgres" cryptedPassword="true" password="YWRtaW4=" schema="public"/>
-  <Entity gr:x="570" gr:y="435" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
+  <Entity gr:x="250" gr:y="295" id="ent4" name="Categorias" duration="persistent" attributeOrder="ent4#att6 ent4#att8 ent4#att14" db:database="db2" db:table="categorias">
     <Attribute id="ent4#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att8" name="Nombrecategoria" type="string" db:column="nombrecategoria"/>
     <Attribute id="ent4#att14" name="DescripcionCategoria" type="string" db:column="descripcioncategoria"/>
@@ -85,7 +85,7 @@
       <db:JoinColumn attribute="ent2#att2" name="proveedor_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="925" gr:y="470" id="ent1" name="CarroCompra" duration="volatile" attributeOrder="ent1#att17 ent1#att18 ent1#att19 ent1#att20 ent1#att21 ent1#att22" volatileStorage="database">
+  <Entity gr:x="475" gr:y="295" id="ent1" name="CarroCompra" duration="volatile" attributeOrder="ent1#att17 ent1#att18 ent1#att19 ent1#att20 ent1#att21 ent1#att22" volatileStorage="database">
     <Attribute id="ent1#att17" key="true" name="oid" type="integer"/>
     <Attribute id="ent1#att18" name="NombreComic_c" type="string"/>
     <Attribute id="ent1#att19" name="oIDComic_c" type="string"/>

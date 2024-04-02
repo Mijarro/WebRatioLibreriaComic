@@ -1,12 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page13" name="Proveedores" landmark="true" gr:x="890" gr:y="45">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page13" name="Proveedores" landmark="true" gr:x="805" gr:y="45">
   <ContentUnits>
-    <MultiMessageUnit id="sv2#page13#mssu7" name="Mensaje" gr:x="0" gr:y="420"/>
+    <MultiMessageUnit id="sv2#page13#mssu7" name="Mensaje" gr:x="0" gr:y="425"/>
     <IndexUnit id="sv2#page13#inu10" name="Lista Proveedores" linkOrder="sv2#page13#inu10#ln66 sv2#page13#inu10#ln67 sv2#page13#inu10#ln68" gr:x="25" gr:y="135" entity="ent2" displayAttributes="ent2#att4">
       <Link id="sv2#page13#inu10#ln66" name="Detalles" to="sv2#page13#dau6" type="automatic" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page13#inu10#ln67" name="Eliminar" to="sv2#dlu5" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv2#page13#inu10#ln68" name="Editar" to="sv2#seu11" type="normal" automaticCoupling="true" validate="true"/>
     </IndexUnit>
-    <EntryUnit id="sv2#page13#enu18" name="Proveedor" linkOrder="sv2#page13#enu18#ln69" gr:x="20" gr:y="255" fieldOrder="sv2#page13#enu18#fld32 sv2#page13#enu18#fld33 sv2#page13#enu18#fld34" entity="ent2">
+    <EntryUnit id="sv2#page13#enu18" name="Proveedor" linkOrder="sv2#page13#enu18#ln69" gr:x="105" gr:y="250" fieldOrder="sv2#page13#enu18#fld32 sv2#page13#enu18#fld33 sv2#page13#enu18#fld34" entity="ent2">
       <Field id="sv2#page13#enu18#fld32" name="Nombre de Proveedor" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
       <Field id="sv2#page13#enu18#fld33" name="Email de Proveedor" type="string" modifiable="true" attribute="ent2#att15" preloaded="true"/>
       <Field id="sv2#page13#enu18#fld34" name="Telefono de Proveedor" type="integer" modifiable="true" attribute="ent2#att16" preloaded="true"/>
@@ -19,13 +19,13 @@
         <LinkParameter id="sv2#page13#enu18#ln69#par208" name="TelefonoProveedor_PASSING" source="sv2#page13#enu18#fld34" passing="true"/>
       </Link>
     </EntryUnit>
-    <EntryUnit id="sv2#page13#enu19" name="Cargar Proveedores" linkOrder="sv2#page13#enu19#ln70" gr:x="110" gr:y="410" fieldOrder="sv2#page13#enu19#fld36">
+    <EntryUnit id="sv2#page13#enu19" name="Cargar Proveedores" linkOrder="sv2#page13#enu19#ln70" gr:x="110" gr:y="415" fieldOrder="sv2#page13#enu19#fld36">
       <Field id="sv2#page13#enu19#fld36" name="Elige archivo Excel .xls" type="blob" modifiable="true"/>
       <Link id="sv2#page13#enu19#ln70" name="Cargar" to="sv2#exu1" type="normal" validate="true">
         <LinkParameter id="sv2#page13#enu19#ln70#par209" name="Elige archivo Excel .xls_BLOB" source="sv2#page13#enu19#fld36" target="sv2#exu1.blob"/>
       </Link>
     </EntryUnit>
-    <DataUnit id="sv2#page13#dau6" name="Proveedor Seleccionado" gr:x="0" gr:y="0" entity="ent2" displayAll="true">
+    <DataUnit id="sv2#page13#dau6" name="Proveedor Seleccionado" gr:x="10" gr:y="0" entity="ent2" displayAll="true">
       <Selector id="sv2#page13#dau6#su10" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page13#dau6#su10#kcond8" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>

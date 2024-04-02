@@ -1,12 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="480" id="sv3#page4" name="Carrito de la compra" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="120" gr:y="480" id="sv3#page4" name="Carrito de la compra" landmark="true">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv3#page4#inu3" name="Listado de Comics" entity="ent3" displayAttributes="ent3#att5 ent3#att9" linkOrder="sv3#page4#inu3#ln13 sv3#page4#inu3#ln34">
+    <IndexUnit gr:x="0" gr:y="5" id="sv3#page4#inu3" name="Listado de Comics" entity="ent3" displayAttributes="ent3#att5 ent3#att9" linkOrder="sv3#page4#inu3#ln13 sv3#page4#inu3#ln34">
       <Link id="sv3#page4#inu3#ln13" name="A&#241;adir al carrito" to="sv3#miu2" type="normal" validate="true">
         <LinkParameter id="sv3#page4#inu3#ln13#par287" name="oid_oIDComic_c" source="data[].ent3#att3" target="sv3#miu2.mov2#opm2#icu2#icp9"/>
       </Link>
       <Link id="sv3#page4#inu3#ln34" name="Detalle" to="sv3#page4#dau3" automaticCoupling="true" type="automatic" validate="true"/>
     </IndexUnit>
-    <IndexUnit gr:x="220" gr:y="0" id="sv3#page4#inu6" name="Cesta de la compra" entity="ent1" displayAttributes="ent1#att18 ent1#att20 ent1#att21 ent1#att22" linkOrder="sv3#page4#inu6#ln32 sv3#page4#inu6#ln39">
+    <IndexUnit gr:x="130" gr:y="0" id="sv3#page4#inu6" name="Cesta de la compra" entity="ent1" displayAttributes="ent1#att18 ent1#att20 ent1#att21 ent1#att22" linkOrder="sv3#page4#inu6#ln32 sv3#page4#inu6#ln39">
       <Link id="sv3#page4#inu6#ln32" name="Eliminar" to="sv3#dlu1" automaticCoupling="true" type="normal" validate="true"/>
       <Link id="sv3#page4#inu6#ln39" name="Borrar 1" to="sv3#miu2" type="normal" validate="true" gr:bendpoints="-30,115,55,-100">
         <LinkParameter id="sv3#page4#inu6#ln39#par124" name="NombreComic_c_PASSING" source="data[].ent1#att18" passing="true"/>
@@ -20,7 +20,7 @@
         <LinkParameter id="sv3#page4#inu6#ln39#par294" name="PrecioComic_c_PrecioComic_c" source="data[].ent1#att20" target="sv3#miu2.mov2#opm2#icu2#icp10"/>
       </Link>
     </IndexUnit>
-    <DataUnit gr:x="20" gr:y="110" id="sv3#page4#dau3" name="Detalles del Comic" entity="ent3" linkOrder="sv3#page4#dau3#ln35" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
+    <DataUnit gr:x="0" gr:y="105" id="sv3#page4#dau3" name="Detalles del Comic" entity="ent3" linkOrder="sv3#page4#dau3#ln35" displayAttributes="ent3#att5 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13">
       <Selector id="sv3#page4#dau3#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page4#dau3#su9#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </Selector>
@@ -28,8 +28,8 @@
         <LinkParameter id="sv3#page4#dau3#ln35#par288" name="oid_oIDComic_c" source="data.ent3#att3" target="sv3#miu2.mov2#opm2#icu2#icp9"/>
       </Link>
     </DataUnit>
-    <MultiMessageUnit gr:x="440" gr:y="165" id="sv3#page4#mssu10" name="Total:"/>
-    <SelectorUnit id="sv3#page4#seu8" name="Selector7" gr:x="415" gr:y="55" entity="ent1" distinctAttributes="sum(ent1#att22)">
+    <MultiMessageUnit gr:x="320" gr:y="165" id="sv3#page4#mssu10" name="Total:"/>
+    <SelectorUnit id="sv3#page4#seu8" name="Selector7" gr:x="300" gr:y="60" entity="ent1" distinctAttributes="sum(ent1#att22)">
       <Link id="sv3#page4#seu8#ln79" name="Flow79" to="sv3#page4#mssu10" type="transport" validate="true">
         <LinkParameter id="sv3#page4#seu8#ln79#par245" name="sum(PrecioTotal)_Shown Messages" source="sum$ent1#att22Array" target="sv3#page4#mssu10.shownMessages"/>
       </Link>

@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="540" gr:y="875" id="sv2#page6" name="Usuarios" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="310" gr:y="790" id="sv2#page6" name="Usuarios" landmark="true">
   <ContentUnits>
-    <IndexUnit gr:x="65" gr:y="120" id="sv2#page6#inu5" name="Lista de Usuarios" entity="User" displayAttributes="userName" linkOrder="sv2#page6#inu5#ln15 sv2#page6#inu5#ln10 sv2#page6#inu5#ln17">
+    <IndexUnit gr:x="45" gr:y="120" id="sv2#page6#inu5" name="Lista de Usuarios" entity="User" displayAttributes="userName" linkOrder="sv2#page6#inu5#ln15 sv2#page6#inu5#ln10 sv2#page6#inu5#ln17">
       <Link id="sv2#page6#inu5#ln10" name="Editar" to="sv2#seu6" automaticCoupling="true" type="normal" validate="true"/>
       <Link id="sv2#page6#inu5#ln15" name="Detalles" to="sv2#page6#dau4" automaticCoupling="true" type="automatic" validate="true"/>
       <Link id="sv2#page6#inu5#ln17" name="Borrar usuario" to="sv2#dlu4" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
-    <EntryUnit gr:x="35" gr:y="0" id="sv2#page6#enu5" name="Formulario Nuevo usuario" entity="User" linkOrder="sv2#page6#enu5#ln11" fieldOrder="sv2#page6#enu5#fld13 sv2#page6#enu5#fld14 sv2#page6#enu5#fld19 sv2#page6#enu5#sfld4">
+    <EntryUnit gr:x="25" gr:y="0" id="sv2#page6#enu5" name="Formulario Nuevo usuario" entity="User" linkOrder="sv2#page6#enu5#ln11" fieldOrder="sv2#page6#enu5#fld13 sv2#page6#enu5#fld14 sv2#page6#enu5#fld19 sv2#page6#enu5#sfld4">
       <Field id="sv2#page6#enu5#fld13" name="Nombre Usuario" type="string" modifiable="true" attribute="userName" preloaded="true"/>
       <Field id="sv2#page6#enu5#fld14" name="Contrase&#241;a" type="string" modifiable="true" attribute="password" preloaded="true"/>
       <Field id="sv2#page6#enu5#fld19" name="Email" type="string" modifiable="true" attribute="email" preloaded="true"/>
@@ -20,12 +20,12 @@
       </Link>
       <SelectionField id="sv2#page6#enu5#sfld4" name="Grupo" type="string" role="User2DefaultGroup"/>
     </EntryUnit>
-    <DataUnit gr:x="10" gr:y="240" id="sv2#page6#dau4" name="Detalles del usuario seleccionado" entity="User" displayAttributes="userName password email User#att1 User#att7">
+    <DataUnit gr:x="0" gr:y="240" id="sv2#page6#dau4" name="Detalles del usuario seleccionado" entity="User" displayAttributes="userName password email User#att1 User#att7">
       <Selector id="sv2#page6#dau4#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page6#dau4#su15#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <EntryUnit gr:x="0" gr:y="385" id="sv2#page6#enu2" name="Formulario contrase&#241;a autogenerada" entity="User" linkOrder="sv2#page6#enu2#ln14" fieldOrder="sv2#page6#enu2#fld4 sv2#page6#enu2#fld5 sv2#page6#enu2#sfld2">
+    <EntryUnit gr:x="140" gr:y="380" id="sv2#page6#enu2" name="Formulario contrase&#241;a autogenerada" entity="User" linkOrder="sv2#page6#enu2#ln14" fieldOrder="sv2#page6#enu2#fld4 sv2#page6#enu2#fld5 sv2#page6#enu2#sfld2">
       <Field id="sv2#page6#enu2#fld4" name="Nombre Usuario" type="string" modifiable="true" attribute="userName"/>
       <Field id="sv2#page6#enu2#fld5" name="Email" type="string" modifiable="true" attribute="email"/>
       <SelectionField id="sv2#page6#enu2#sfld2" name="Grupo" type="string" role="User2DefaultGroup"/>
@@ -36,17 +36,17 @@
       </Link>
       <Field id="sv2#page6#enu2#fld6" name="oid" type="integer" attribute="userOID" hidden="true"/>
     </EntryUnit>
-    <SelectorUnit id="sv2#page6#seu4" name="Selector9" gr:x="305" gr:y="155" entity="Group">
+    <SelectorUnit id="sv2#page6#seu4" name="Selector9" gr:x="215" gr:y="155" entity="Group">
       <Link id="sv2#page6#seu4#ln7" name="Flow37" to="sv2#page6#enu5" type="transport" validate="true">
         <LinkParameter id="sv2#page6#seu4#ln7#par19" name="groupName_defaultGroup [label]" source="groupNameArray" target="sv2#page6#enu5#sfld4_label"/>
         <LinkParameter id="sv2#page6#seu4#ln7#par88" name="oid_defaultGroup [output]" source="groupOIDArray" target="sv2#page6#enu5#sfld4_output"/>
       </Link>
-      <Link id="sv2#page6#seu4#ln8" name="Flow8" to="sv2#page6#enu2" type="transport" validate="true" gr:bendpoints="-31,148,183,-82">
+      <Link id="sv2#page6#seu4#ln8" name="Flow8" to="sv2#page6#enu2" type="transport" validate="true">
         <LinkParameter id="sv2#page6#seu4#ln8#par89" name="groupName_defaultGroup [label]" source="groupNameArray" target="sv2#page6#enu2#sfld2_label"/>
         <LinkParameter id="sv2#page6#seu4#ln8#par90" name="oid_defaultGroup [output]" source="groupOIDArray" target="sv2#page6#enu2#sfld2_output"/>
       </Link>
     </SelectorUnit>
-    <IndexUnit id="sv2#page6#inu9" name="Lista de Roles" gr:x="330" gr:y="390" entity="Group" displayAttributes="groupOID groupName"/>
+    <IndexUnit id="sv2#page6#inu9" name="Lista de Roles" gr:x="25" gr:y="380" entity="Group" displayAttributes="groupOID groupName"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

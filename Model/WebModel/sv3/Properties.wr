@@ -1,29 +1,21 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Inicio" landmarks="sv3#page2 sv3#page3 sv3#page4 sv3#page7 sv3#lou2" homePage="sv3#page2" protected="true">
   <OperationUnits>
-    <LogoutUnit gr:x="585" gr:y="190" id="sv3#lou2" name="Logout" landmark="true" siteView="sv1"/>
-    <DeleteUnit gr:x="445" gr:y="180" id="sv3#dlu4" name="Delete4" entity="User">
+    <LogoutUnit gr:x="580" gr:y="240" id="sv3#lou2" name="Logout" landmark="true" siteView="sv1"/>
+    <DeleteUnit gr:x="440" gr:y="230" id="sv3#dlu4" name="Delete4" entity="User">
       <Selector id="sv3#dlu4#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu4#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#dlu4#oln7" name="OKFlow7" to="sv3#lou2" automaticCoupling="true"/>
       <KOLink id="sv3#dlu4#kln14" name="KOFlow14" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </DeleteUnit>
-    <ModifyUnit gr:x="295" gr:y="345" id="sv3#mfu4" name="Update4" entity="User">
+    <ModifyUnit gr:x="310" gr:y="375" id="sv3#mfu4" name="Update4" entity="User">
       <Selector id="sv3#mfu4#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#mfu4#su15#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#mfu4#oln9" name="OKFlow9" to="sv3#page7" automaticCoupling="true"/>
       <KOLink id="sv3#mfu4#kln10" name="KOFlow10" to="sv3#page10#mssu3" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit id="sv3#seu3" name="SelectorComic" gr:x="290" gr:y="815" entity="ent4" linkOrder="sv3#seu3#ln36">
-      <Selector id="sv3#seu3#su5" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#seu3#su5#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
-      </Selector>
-      <Link id="sv3#seu3#ln36" name="Flow36" to="sv3#page3#inu7" type="transport" validate="true">
-        <LinkParameter id="sv3#seu3#ln36#par4" name="oid_current oid" source="ent4#att6Array" target="sv3#page3#inu7.current.ent3#att3"/>
-      </Link>
-    </SelectorUnit>
-    <DeleteUnit gr:x="735" gr:y="550" id="sv3#dlu1" name="CarBajaCarroCompra" entity="ent1">
+    <DeleteUnit gr:x="570" gr:y="480" id="sv3#dlu1" name="CarBajaCarroCompra" entity="ent1">
       <Selector id="sv3#dlu1#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu1#su8#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>

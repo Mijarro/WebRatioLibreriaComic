@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="830" gr:y="690" id="sv3#page2" name="Comics" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="765" gr:y="620" id="sv3#page2" name="Comics" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="180" id="sv3#page2#enu1" name="Buscar Comic" fieldOrder="sv3#page2#enu1#fld2 sv3#page2#enu1#fld3" linkOrder="sv3#page2#enu1#ln76">
       <Field id="sv3#page2#enu1#fld2" name="Texto para buscar Titulo" type="string" modifiable="true"/>
@@ -22,8 +22,8 @@
         <LinkParameter id="sv3#page2#dau2#ln5#par2" name="oid_oIDComic_c" source="data.ent3#att3" target="sv3#miu2.mov2#opm2#icu2#icp9"/>
       </Link>
     </DataUnit>
-    <MultiMessageUnit id="sv3#page2#mssu6" name="Resultado" gr:x="180" gr:y="550"/>
-    <EventCalendarUnit id="sv3#page2#ecu2" name="Calendario" linkOrder="sv3#page2#ecu2#ln38" gr:x="180" gr:y="440">
+    <MultiMessageUnit id="sv3#page2#mssu6" name="Resultado" gr:x="25" gr:y="430"/>
+    <EventCalendarUnit id="sv3#page2#ecu2" name="Calendario" linkOrder="sv3#page2#ecu2#ln38" gr:x="25" gr:y="320">
       <Link id="sv3#page2#ecu2#ln38" name="Flow1" to="sv3#page2#mssu6" type="normal" validate="true">
         <LinkParameter id="sv3#page2#ecu2#ln38#par5" name="Selected Date_Shown Messages" source="date[].date" target="sv3#page2#mssu6.shownMessages"/>
       </Link>
